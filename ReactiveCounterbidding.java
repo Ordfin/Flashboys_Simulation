@@ -1,6 +1,6 @@
 import java.util. *;
 
-public class ReactiveCounterbidding {
+public class ReactiveCounterbidding extends Strategy{
 	
 	public void run(double t, int i, double s, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {
 		

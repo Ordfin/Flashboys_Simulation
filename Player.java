@@ -5,13 +5,26 @@ import javax.swing.JOptionPane;
 public class Player {
 
 	private int id;
-	private Strategy s;
+	private Strategy strategy;
 	private ArrayList<Bid> bids;
 
 	
-	public Player(int id) {
-		Scanner dd = new Scanner(System.in);
-		String[] choices = { "ReactiveCounterbidding", "BlindRaising" };
+	public Player(int id, String strat) {
+		
+		this.id = id;
+		
+		switch (strat) { 
+		
+        case "BlindRaising":;
+            this.strategy = new BlindRaising();
+            ((BlindRaising) strategy).enterValues();
+            break; 
+        case "ReactiveCounterbidding": 
+            this.strategy = new ReactiveCounterbidding(); 
+            break; 
+		}
+		
+		this.bids = new ArrayList<Bid>();
 	}
 	
 
@@ -24,10 +37,10 @@ public class Player {
 		this.id = id;
 	}
 	public Strategy getS() {
-		return s;
+		return this.strategy;
 	}
-	public void setS(Strategy s) {
-		this.s = s;
+	public void setS(Strategy strat) {
+		this.strategy = strat;
 	}
 	public ArrayList<Bid> getBids() {
 		return bids;
