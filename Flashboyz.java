@@ -16,6 +16,18 @@ public class Flashboyz {
 		while (player<2) {
 			//instantiate players
 		}
+		
+	        Scanner dd = new Scanner(System.in);
+
+			    System.out.println("Enter an auction duration");
+			    int duration = dd.nextInt();
+			    System.out.println("Enter a minimum tick amount");
+			    int epsilon = dd.nextInt();
+			    System.out.println("Enter a minimum increase percent");
+			    int iota= dd.nextInt();
+			    System.out.println("Enter a smallest initial bid");
+			    int s= dd.nextInt();
+  
 	}
 	
 	public void auction() {
