@@ -3,13 +3,9 @@ public class Flashboyz {
 	
 	public static void main(String[] args) {
 		int profit; 
-<<<<<<< HEAD
+
 		int loss; 
-		BidList;
-		ArrayList<Bid> allBids = new ArrayList<Bid>;
-=======
 		ArrayList<Bid> BidList;
->>>>>>> update
 		int duration;
 		double epsilon; //minimum tick 
 		double iota; //minimum increase percent

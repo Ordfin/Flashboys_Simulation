@@ -1,16 +1,13 @@
 
-public class bid {
+public class Bid {
 
 	private double time; //in econds
 	private double amount;
 	private int player;
 	
 
-<<<<<<< HEAD:Bid.java
+
 	public Bid(double t, double amt, int p) {
-=======
-	public bid(double t, double amt, int p) {
->>>>>>> update:bid.java
 		time = t;
 		amount = amt;
 		player = p; 
