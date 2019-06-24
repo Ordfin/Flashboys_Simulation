@@ -1,38 +1,31 @@
+import java.util.ArrayList;
 
-public class player {
-	private int ID; 
-	Strategy strat;
-	BidList bl; 
+public class Player {
 	
-	public player(int ID, Strategy strat, BidList bl) {
-		this.ID = ID; 
-		this.strategy = strat; 
-		ArrayList<bid> bl = new bidlist();
+	private int id;
+	private Strategy s;
+	private ArrayList<bid> bids;
+	
+	
+	public int getId() {
+		return id;
 	}
-
-	public int getID() {
-		return ID;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public void setID(int iD) {
-		ID = iD;
+	public Strategy getS() {
+		return s;
 	}
-
-	public Strategy getStrat() {
-		return strat;
+	public void setS(Strategy s) {
+		this.s = s;
 	}
-
-	public void setStrat(Strategy strat) {
-		this.strat = strat;
+	public ArrayList<bid> getBids() {
+		return bids;
 	}
-
-	public BidList getBl() {
-		return bl;
+	public void setBids(ArrayList<bid> bids) {
+		this.bids = bids;
 	}
-
-	public void setBl(BidList bl) {
-		this.bl = bl;
-	}
-		
-
+	
+	
+	
 }

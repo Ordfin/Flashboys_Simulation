@@ -1,12 +1,12 @@
 
-public class Bid {
+public class bid {
 
 	private double time; //in econds
 	private double amount;
 	private int player;
 	
 
-	public Bid(double t, double amt, int p) {
+	public bid(double t, double amt, int p) {
 		time = t;
 		amount = amt;
 		player = p; 

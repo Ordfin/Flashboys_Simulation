@@ -1,9 +1,9 @@
-
+import java.util. *;
 public class Flashboyz {
 	
 	public static void main(String[] args) {
 		int profit; 
-		BidList;
+		ArrayList<Bid> BidList;
 		int duration;
 		double epsilon; //minimum tick 
 		double iota; //minimum increase percent
