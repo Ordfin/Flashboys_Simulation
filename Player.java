@@ -1,14 +1,24 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 
-public class player {
+import javax.swing.JOptionPane;
+public class Player {
 	private int ID; 
 	Strategy strat;
-	BidList bl; 
+	ArrayList<Bid> bidList = new ArrayList<bid>; 
 	
-	public player(int ID, Strategy strat, BidList bl) {
+	public Player(int ID) {
+		Scanner dd = new Scanner(System.in);
+		String[] choices = { "ReactiveCounterbidding", "BlindRaising" };
+	    
 		this.ID = ID; 
-		this.strategy = strat; 
-		ArrayList<bid> bl = new bidlist();
+		this.Strategy = strat; 
+		ArrayList<Bid> bl = new ArrayList<Bid>();
+		
+		//get user input
 	}
+	
+	
 
 	public int getID() {
 		return ID;
