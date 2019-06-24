@@ -1,4 +1,4 @@
 
-public class strategy {
+public class Strategy {
 
 }
