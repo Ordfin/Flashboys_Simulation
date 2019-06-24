@@ -6,7 +6,7 @@ public class BlindRaising {
 		
 		if(t<D) {
 			if (t % min_wait == 0) {
-				Bid b = new Bid(t, s *(1+f), i);
+				Bid b = new Bid(t, s *(1+f), i); //wrong formula, ^k
 				allBids.add(b);
 				bidsPlayer.add(b);
 			}
