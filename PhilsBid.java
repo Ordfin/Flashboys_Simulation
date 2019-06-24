@@ -1,22 +1,18 @@
 
 public class Bid {
 
-	private double time; //in econds
+	private double time;
 	private double amount;
 	private int player;
 	
-
+	
+	
+	
 	public Bid(double t, double amt, int p) {
 		time = t;
 		amount = amt;
 		player = p; 
 	}
-	
-	public static void trying(int i) {
-		int t;
-		t = i+i;
-	}
-	
 	public double getTime() {
 		return time;
 	}
