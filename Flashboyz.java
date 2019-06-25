@@ -41,8 +41,8 @@ public class Flashboyz {
 			String strategy = sc.nextLine();
 			Player p = new Player(i, strategy);
 			players.add(p);
-		}
-	}	
+		} //end of for
+	}	//end of main
 		
 		public static void results(int profit1, int l1, ArrayList<Bid> allBids, ArrayList<Player> players) {
 			
@@ -57,9 +57,10 @@ public class Flashboyz {
 					System.out.println("The loser is player " + players.get(i).getId() + " with a loss of " + lost);
 				}
 			}
+
   
-		}
+		}//results
 	
 	
 
-}
+}//class
