@@ -43,12 +43,15 @@ public class Flashboyz {
 			players.add(p);
 		}
 		
-		public static void results(int profit, ArrayList<Bid> allBids, ArrayList<Player> amt_players) {
-			Int winner = allBids.get(allBids.size()).getPlayer(); 
+		public static void results(int profit, int l, ArrayList<Bid> allBids, ArrayList<Player> amt_players) {
+			Int winner = allBids.get(allBids.size()-1).getPlayer(); 
 			double win_amt = profit - (allBids.get(allBids.size()).getAmount());  
 			System.out.println("The winner is player " + winner + " with a profit of " + win_amt);
 			for (int i=0; i < amt_players.size(); i++) {
-				//find losing player and lost amount
+				if (amt_players.get(i).getID != winner){
+					int lost = (amt_players.get(i).getID.getBids.size()-1 .getAmount)*l; 
+					System.out.println("The loser is player " + amt_players.get(i).getID + " with a loss of " + lost);;
+					
 		}
 
 	}
