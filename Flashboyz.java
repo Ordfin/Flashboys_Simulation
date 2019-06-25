@@ -41,23 +41,26 @@ public class Flashboyz {
 			String strategy = sc.nextLine();
 			Player p = new Player(i, strategy);
 			players.add(p);
-		}
+		} //end of for
+	}	//end of main
 		
-		public static void results(int profit, int l, ArrayList<Bid> allBids, ArrayList<Player> amt_players) {
-			Int winner = allBids.get(allBids.size()-1).getPlayer(); 
-			double win_amt = profit - (allBids.get(allBids.size()).getAmount());  
+		public static void results(int profit1, int l1, ArrayList<Bid> allBids, ArrayList<Player> players) {
+			
+			int winner = allBids.get(allBids.size()-1).getPlayer(); 
+			double win_amt = profit1 - (allBids.get(allBids.size()-1).getAmount());  
 			System.out.println("The winner is player " + winner + " with a profit of " + win_amt);
-			for (int i=0; i < amt_players.size(); i++) {
-				if (amt_players.get(i).getID != winner){
-					int lost = (amt_players.get(i).getID.getBids.size()-1 .getAmount)*l; 
-					System.out.println("The loser is player " + amt_players.get(i).getID + " with a loss of " + lost);;
+			
+			for (int i=0; i < players.size(); i++) {
+				if (players.get(i).getId() != winner){
 					
-		}
+					double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*l1; 
+					System.out.println("The loser is player " + players.get(i).getId() + " with a loss of " + lost);
+				}
+			}
 
-	}
   
-	}
+		}//results
 	
 	
 
-}
+}//class
