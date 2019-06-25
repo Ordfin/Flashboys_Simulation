@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner; 
 
 public class BlindRaising extends Strategy{
-	
+	  
 	private double f;
 	private int wait;
 	private static int k;

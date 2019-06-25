@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Auction {
+public class Auction {  
 	
 	private int duration; //auction duration
 	private double epsilon; //minimum tick 

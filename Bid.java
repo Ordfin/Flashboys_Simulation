@@ -13,7 +13,7 @@ public class Bid {
 		player = p; 
 		System.out.println("Player " + p +" bid $" + amt + " at time " + t);
 
-	}
+	}  
 	
 	public static void trying(int i) {
 		int t;
