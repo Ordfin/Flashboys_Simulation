@@ -3,15 +3,19 @@ public class Bid {
 
 	private double time; //in econds
 	private double amount;
-	private int i;
+	private int player;
 	
 
 
 	public Bid(double t, double amt, int p) {
 		time = t;
 		amount = amt;
+<<<<<<< HEAD
+		player = p; 
+=======
 		i = p; 
 
+>>>>>>> 620026ac3cb17f0780c54d7a2f4cbce4e6e7a099
 	}
 	
 	public static void trying(int i) {
