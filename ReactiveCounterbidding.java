@@ -5,7 +5,13 @@ public class ReactiveCounterbidding extends Strategy{
 	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {	
 		
 		if (allBids.isEmpty()) {
-			Bid b = new Bid(t, s, i);
+			Bid b = new Bid(t, s, i);  
+			allBids.add(b);
+			bidsPlayer.add(b);
+		}
+		else if(bidsPlayer.isEmpty()) {
+			double a = s + 1;
+			Bid b = new Bid(t, a, i);
 			allBids.add(b);
 			bidsPlayer.add(b);
 		}

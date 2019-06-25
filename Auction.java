@@ -1,18 +1,20 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Auction {
+
+
+public class Auction { //this is the right one  
 	
-	private int duration = 15; //auction duration
-	private double epsilon = .0001; //minimum tick 
-	private double iota = .15; //minimum increase percent
-	private int s = 3; //smallest initial bid
-	private double l = .3; //loss function
-	private ArrayList<Bid> BidList;
-	private double profit = 100; 
-	private int amt_players = 2;
-	private ArrayList<Player> players;
-	
+	private int duration; //auction duration
+	private double epsilon; //minimum tick 
+	private double iota; //minimum increase percent
+	private int s; //smallest initial bid
+	private double l; //loss function
+	private ArrayList<Bid> BidList = new ArrayList<Bid>();
+	private double profit; 
+	private int amt_players;
+	private ArrayList<Player> players = new ArrayList<Player>();
+	private boolean workingMaster = false;	
 	
 	public void getInput() {
 //		Scanner sc = new Scanner(System.in);
@@ -42,13 +44,36 @@ public class Auction {
 		BidList = new ArrayList<>();
 		String strategy;
 
+		System.out.println("Enter an auction duration(in seconds)");
+		duration = sc.nextInt();
+		
+		System.out.println("Enter a minimum tick amount");
+		epsilon = sc.nextDouble();
+		
+		System.out.println("Enter a minimum increase percent");
+		iota = sc.nextDouble();
+		
+		System.out.println("Enter a smallest initial bid");
+		s = sc.nextInt();
+		
+		System.out.println("Enter a loss function percent");
+		l= sc.nextDouble();
+		
+		System.out.println("Enter oppertune profit");
+		profit = sc.nextDouble();
+		
+		System.out.println("Enter how many participants");
+		amt_players = sc.nextInt();
+		
+			
 		for (int i=0; i<amt_players; i++) {
 			System.out.println("Choose strategy for player " + i);
-			//strategy = sc.next();
-			Player p = new Player(i, "ReactiveCounterbidding");
+			String strategy = sc.next();
+			Player p = new Player(i, strategy);
 			players.add(p);
 			System.out.println(p.getS());
 		}
+
 		
 	}
 	
@@ -76,17 +101,12 @@ public class Auction {
 	public void auction() {
 		int time = 0;
 		while (time < duration) {  
-			for (int i=0; i<players.size(); i++) {
+			for (int i=0; i< amt_players; i++) {
 				players.get(i).getS().run (time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids());
-				
 			}
-			time++;
+			time++;	
 		}
-		for (int i=0; i<BidList.size(); i++) {
-			System.out.println("Time " + BidList.get(i).getTime()+ " Player " + BidList.get(i).getPlayer() + " bids " + BidList.get(i).getAmount());
-		}
-		
-		results(); 
+		results(profit, l, BidList, players); 
 
 	}
 	

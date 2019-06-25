@@ -12,7 +12,9 @@ public class Bid {
 		amount = amt;
 		player = p; 
 
-	}
+		System.out.println("Player " + p +" bid $" + amt + " at time " + t);
+
+	}  
 	
 	public static void trying(int i) {
 		int t;

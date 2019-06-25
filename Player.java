@@ -12,6 +12,7 @@ public class Player {
 	
 	public Player(int id, String strat) {
 		
+		
 		this.id = id;
 		
 		switch (strat) { 
@@ -34,7 +35,7 @@ public class Player {
 	
 	public int getId() {
 		return id;
-	}
+	}  
 	public void setId(int id) {
 		this.id = id;
 	}
