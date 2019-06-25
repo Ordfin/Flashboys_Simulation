@@ -1,25 +1,23 @@
 import java.util. *;
 public class Flashboyz {
 	
+	static int duration; //auction duration
+	static double epsilon; //minimum tick 
+	static double iota; //minimum increase percent
+	static int s; //smallest initial bid
+	static double l; //loss function
+	
+
 	public static void main(String[] args) {
-//		int profit; 
-//
-//		int loss; 
-//		ArrayList<Bid> BidList;
-//		int duration;
-//		double epsilon; //minimum tick 
-//		double iota; //minimum increase percent
-//		int s; //smallest initial bid
-//		double l; //loss function
-//		int player = 0; 
-//		int time = 0; 
-//		while (player<2) {
-//			//instantiate players
+		int time = 0; 
+		ArrayList<Bid> BidList;
+		int profit; 
+		int loss; 
 		
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter an auction duration(in seconds)");
-		int Duration = sc.nextInt();
+		int duration = sc.nextInt();
 		
 		System.out.println("Enter a minimum tick amount");
 		double epsilon = sc.nextDouble();
@@ -28,7 +26,10 @@ public class Flashboyz {
 		double iota = sc.nextDouble();
 		
 		System.out.println("Enter a smallest initial bid");
-		int min_start = sc.nextInt();
+		int s = sc.nextInt();
+		
+		System.out.println("Enter a loss function percent");
+		int l= dd.nextInt();
 		
 		System.out.println("Enter how many participants");
 		int amt_players = sc.nextInt();
@@ -41,8 +42,23 @@ public class Flashboyz {
 			Player p = new Player(i, strategy);
 			players.add(p);
 		}
+	}	
+		
+		public static void results(int profit1, int l1, ArrayList<Bid> allBids, ArrayList<Player> players) {
+			
+			int winner = allBids.get(allBids.size()-1).getPlayer(); 
+			double win_amt = profit1 - (allBids.get(allBids.size()-1).getAmount());  
+			System.out.println("The winner is player " + winner + " with a profit of " + win_amt);
+			
+			for (int i=0; i < players.size(); i++) {
+				if (players.get(i).getId() != winner){
+					
+					double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*l1; 
+					System.out.println("The loser is player " + players.get(i).getId() + " with a loss of " + lost);
+				}
+			}
   
-	}
+		}
 	
 	
 
