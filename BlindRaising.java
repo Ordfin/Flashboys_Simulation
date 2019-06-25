@@ -3,11 +3,13 @@ import java.util.Scanner;
 
 public class BlindRaising extends Strategy{
 	
-	double f;
+	private double f;
+	private int wait;
+	private static int k;
 	
 
 	
-	public void run(double t, double D, double wait, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double s, double f, int k, int i) {	
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {	
 		
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
@@ -15,6 +17,7 @@ public class BlindRaising extends Strategy{
 				Bid b = new Bid(t, Math.pow(s *(1+f), k), i);
 				allBids.add(b);
 				bidsPlayer.add(b);
+				k++;
 			}
 		}
 		return;	
@@ -25,6 +28,10 @@ public class BlindRaising extends Strategy{
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Enter fractional increment");
     	double fi = sc.nextDouble();
+    	System.out.println("Enter time wait interval");
+    	int w = sc.nextInt();
+    	
+    	this.wait = w;
     	this.f = fi;
 	}
 	
