@@ -29,7 +29,7 @@ public class Flashboyz {
 		int s = sc.nextInt();
 		
 		System.out.println("Enter a loss function percent");
-		int l= dd.nextInt();
+		int l= sc.nextInt();
 		
 		System.out.println("Enter how many participants");
 		int amt_players = sc.nextInt();
