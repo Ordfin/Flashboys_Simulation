@@ -2,6 +2,7 @@ import java.util. *;
 public class Flashboyz {
 	
 	public static void main(String[] args) {
+
 //		int profit; 
 //
 //		int loss; 
@@ -15,6 +16,7 @@ public class Flashboyz {
 //		int time = 0; 
 //		while (player<2) {
 //			//instantiate players
+
 		
 		Scanner sc = new Scanner(System.in);
 
