@@ -11,6 +11,7 @@ public class Bid {
 		time = t;
 		amount = amt;
 		i = p; 
+
 	}
 	
 	public static void trying(int i) {
