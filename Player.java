@@ -16,7 +16,7 @@ public class Player {
 		
 		switch (strat) { 
 		
-        case "BlindRaising":;
+        case "BlindRaising":
             this.strategy = new BlindRaising();
             ((BlindRaising) strategy).enterValues();
             break; 
