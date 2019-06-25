@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class Player {
 
 	private int id;
+
 	private Strategy strategy;
 	private ArrayList<Bid> bids;
 
@@ -25,7 +26,7 @@ public class Player {
 		}
 		
 		this.bids = new ArrayList<Bid>();
-	}
+
 	
 
 	
