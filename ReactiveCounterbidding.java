@@ -9,6 +9,12 @@ public class ReactiveCounterbidding extends Strategy{
 			allBids.add(b);
 			bidsPlayer.add(b);
 		}
+		else if(bidsPlayer.isEmpty()) {
+			double a = s + 1;
+			Bid b = new Bid(t, a, i);
+			allBids.add(b);
+			bidsPlayer.add(b);
+		}
 		else {
 			if ((allBids.get(allBids.size()-1).getPlayer() != i) 
 					&& (allBids.get(allBids.size()-1).getAmount() > bidsPlayer.get(bidsPlayer.size()-1).getAmount())) {

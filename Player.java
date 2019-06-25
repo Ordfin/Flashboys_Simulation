@@ -12,11 +12,12 @@ public class Player {
 	
 	public Player(int id, String strat) {
 		
+		
 		this.id = id;
 		
 		switch (strat) { 
 		
-        case "BlindRaising":;
+        case "BlindRaising":
             this.strategy = new BlindRaising();
             ((BlindRaising) strategy).enterValues();
             break; 

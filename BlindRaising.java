@@ -10,11 +10,15 @@ public class BlindRaising extends Strategy{
 
 	
 	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {	
-		
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
-				Bid b = new Bid(t, Math.pow(s *(1+f), k), i);
+				double amt = Math.pow(s *(1+f), k);
+				if (!(bidsPlayer.isEmpty())) {
+					if (amt < allBids.get(allBids.size()-1).getAmount()) 
+						return; 
+				}
+				Bid b = new Bid(t, amt , i);
 				allBids.add(b);
 				bidsPlayer.add(b);
 				k++;

@@ -8,11 +8,10 @@ public class Auction {
 	private double iota; //minimum increase percent
 	private int s; //smallest initial bid
 	private double l; //loss function
-	private ArrayList<Bid> BidList;
+	private ArrayList<Bid> BidList = new ArrayList<Bid>();
 	private double profit; 
-	private int loss;
 	private int amt_players;
-	private ArrayList<Player> players;
+	private ArrayList<Player> players = new ArrayList<Player>();
 	
 	
 	public void getInput() {
@@ -31,22 +30,22 @@ public class Auction {
 		s = sc.nextInt();
 		
 		System.out.println("Enter a loss function percent");
-		l= sc.nextInt();
-		
-		System.out.println("Enter how many participants");
-		amt_players = sc.nextInt();
+		l= sc.nextDouble();
 		
 		System.out.println("Enter oppertune profit");
 		profit = sc.nextDouble();
 		
-		ArrayList<Player> players = new ArrayList<>();
+		System.out.println("Enter how many participants");
+		amt_players = sc.nextInt();
 		
+			
 		for (int i=0; i<amt_players; i++) {
 			System.out.println("Choose strategy for player " + i);
-			String strategy = sc.nextLine();
+			String strategy = sc.next();
 			Player p = new Player(i, strategy);
 			players.add(p);
 		}
+
 		
 	}
 	
@@ -73,13 +72,12 @@ public class Auction {
 	public void auction() {
 		int time = 0;
 		while (time < duration) {  
-			for (int i=0; i<players.size(); i++) {
-				players.get(i).getS().run (time, duration, s, i, iota, epsilon, loss, BidList, players.get(i).getBids());
-				time++;	
+			for (int i=0; i< amt_players; i++) {
+				players.get(i).getS().run (time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids());
 			}
-			 
+			time++;	
 		}
-		results(profit, loss, BidList, players); 
+		results(profit, l, BidList, players); 
 
 	}
 }
