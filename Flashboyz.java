@@ -42,6 +42,16 @@ public class Flashboyz {
 			Player p = new Player(i, strategy);
 			players.add(p);
 		}
+		
+		public static void results(int profit, ArrayList<Bid> allBids, ArrayList<Player> amt_players) {
+			Int winner = allBids.get(allBids.size()).getPlayer(); 
+			double win_amt = profit - (allBids.get(allBids.size()).getAmount());  
+			System.out.println("The winner is player " + winner + " with a profit of " + win_amt);
+			for (int i=0; i < amt_players.size(); i++) {
+				//find losing player and lost amount
+		}
+
+	}
   
 	}
 	
