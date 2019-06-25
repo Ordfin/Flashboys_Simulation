@@ -1,22 +1,18 @@
 import java.util. *;
 public class Flashboyz {
 	
+	static int duration; //auction duration
+	static double epsilon; //minimum tick 
+	static double iota; //minimum increase percent
+	static int s; //smallest initial bid
+	static double l; //loss function
+	
+
 	public static void main(String[] args) {
-
-//		int profit; 
-//
-//		int loss; 
-//		ArrayList<Bid> BidList;
-//		int duration;
-//		double epsilon; //minimum tick 
-//		double iota; //minimum increase percent
-//		int s; //smallest initial bid
-//		double l; //loss function
-//		int player = 0; 
-//		int time = 0; 
-//		while (player<2) {
-//			//instantiate players
-
+		int time = 0; 
+		ArrayList<Bid> BidList;
+		int profit; 
+		int loss; 
 		
 		Scanner sc = new Scanner(System.in);
 
@@ -31,6 +27,9 @@ public class Flashboyz {
 		
 		System.out.println("Enter a smallest initial bid");
 		int min_start = sc.nextInt();
+		
+		System.out.println("Enter a loss function percent");
+		int l= dd.nextInt();
 		
 		System.out.println("Enter how many participants");
 		int amt_players = sc.nextInt();
