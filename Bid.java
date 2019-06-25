@@ -3,14 +3,14 @@ public class Bid {
 
 	private double time; //in econds
 	private double amount;
-	private int i;
+	private int player;
 	
 
 
 	public Bid(double t, double amt, int p) {
 		time = t;
 		amount = amt;
-		i = p; 
+		player = p; 
 	}
 	
 	public static void trying(int i) {
