@@ -7,7 +7,6 @@ public class ReactiveCounterbidding extends Strategy{
 		if (allBids.isEmpty()) {
 			Bid b = new Bid(t, s, i);
 			allBids.add(b);
-			System.out.println("Player " + p + " bid $" + amt + " at time " + t);
 			bidsPlayer.add(b);
 		}
 		else {
@@ -18,7 +17,6 @@ public class ReactiveCounterbidding extends Strategy{
 						1 + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount());
 				Bid b = new Bid(t, a, i);
 				allBids.add(b);
-				System.out.println("Player " + p + " bid $" + amt + " at time " + t);
 				bidsPlayer.add(b);
 			}
 		}
