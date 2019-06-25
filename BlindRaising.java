@@ -16,6 +16,7 @@ public class BlindRaising extends Strategy{
 			if (t % wait == 0) {
 				Bid b = new Bid(t, Math.pow(s *(1+f), k), i);
 				allBids.add(b);
+				System.out.println("Player " + p + " bid $" + amt + " at time " + t);
 				bidsPlayer.add(b);
 				k++;
 			}
