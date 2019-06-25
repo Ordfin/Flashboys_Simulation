@@ -17,7 +17,7 @@ public class Flashboyz {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Enter an auction duration(in seconds)");
-		int Duration = sc.nextInt();
+		int duration = sc.nextInt();
 		
 		System.out.println("Enter a minimum tick amount");
 		double epsilon = sc.nextDouble();
@@ -26,7 +26,7 @@ public class Flashboyz {
 		double iota = sc.nextDouble();
 		
 		System.out.println("Enter a smallest initial bid");
-		int min_start = sc.nextInt();
+		int s = sc.nextInt();
 		
 		System.out.println("Enter a loss function percent");
 		int l= dd.nextInt();
