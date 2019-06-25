@@ -1,4 +1,8 @@
+import java.util.ArrayList;
 
-public class Strategy {
+abstract class Strategy {
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {
+		return;
+	}
 
 }
