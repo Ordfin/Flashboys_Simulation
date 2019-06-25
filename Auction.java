@@ -12,6 +12,7 @@ public class Auction {
 	private double profit; 
 	private int loss;
 	private int amt_players;
+	private ArrayList<Player> players;
 	
 	
 	public void getInput() {
@@ -69,16 +70,16 @@ public class Auction {
 	}
 	
 	
-	public void auction(int duration, double s, double epsilon, double iota, double loss, double profit, ArrayList<Bid> allBids, ArrayList<Player> players) {
+	public void auction() {
 		int time = 0;
 		while (time < duration) {  
 			for (int i=0; i<players.size(); i++) {
-				players.get(i).getS().run (time, duration, s, i, iota, epsilon, loss, allBids, players.get(i).getBids());
+				players.get(i).getS().run (time, duration, s, i, iota, epsilon, loss, BidList, players.get(i).getBids());
 				time++;	
 			}
 			 
 		}
-		results(profit, loss, allBids, players); 
+		results(profit, loss, BidList, players); 
 
 	}
 }
