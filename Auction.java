@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+
 public class Auction { //this is the right one  
 	
 	private int duration; //auction duration
@@ -12,6 +14,7 @@ public class Auction { //this is the right one
 	private double profit; 
 	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
+	private boolean workingMaster = false;
 	
 	
 	public void getInput() {
