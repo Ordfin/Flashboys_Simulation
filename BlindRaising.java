@@ -13,14 +13,6 @@ public class BlindRaising extends Strategy{
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
 				Bid b = new Bid(t, Math.pow(s *(1+f), k), i);
-
-	public void run(double t, double D, double min_wait, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double s, double f, int i) {	
-		
-		if(t<D) {
-			if (t % min_wait == 0) {
-
-				Bid b = new Bid(t, s *(1+f), i); //wrong formula, ^k
-
 				allBids.add(b);
 				bidsPlayer.add(b);
 			}
@@ -33,7 +25,7 @@ public class BlindRaising extends Strategy{
     	Scanner sc = new Scanner(System.in);
     	System.out.println("Enter fractional increment");
     	double fi = sc.nextDouble();
-      this.f = fi;
+    	this.f = fi;
 	}
 	
 	
