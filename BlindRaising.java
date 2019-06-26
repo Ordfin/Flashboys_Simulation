@@ -9,7 +9,7 @@ public class BlindRaising extends Strategy{
 	private int wait;
 	private static int k;
 	
-  
+
 	
 	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer) {	
 		if(t<D) {

@@ -52,7 +52,7 @@ public class Auction { //this is the right one
 			}
 		}
 
-	}  
+	}
 	
 	
 	public void auction() {
