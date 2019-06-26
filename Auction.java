@@ -2,8 +2,6 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 
-
-
 public class Auction { //this is the right one  
 	
 	private int duration; //auction duration
@@ -16,8 +14,8 @@ public class Auction { //this is the right one
 	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
 	
+	
 	public void getInput() {
-
 	
 		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
 		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
@@ -26,14 +24,12 @@ public class Auction { //this is the right one
 		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
 		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
 		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
-
 		
 			
 		for (int i=0; i<amt_players; i++) {
 			String strategy = JOptionPane.showInputDialog("Choose strategy for player " + i);
 			Player p = new Player(i, strategy);
 			players.add(p);
-			System.out.println(p.getS());
 		}
 
 		
@@ -69,7 +65,6 @@ public class Auction { //this is the right one
 		results(); 
 
 	}
-	
 }
 
 
