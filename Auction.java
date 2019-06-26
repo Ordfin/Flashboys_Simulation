@@ -36,7 +36,6 @@ public class Auction { //this is the right one
 	}
 	
 	
-	
 	public void results() {
 		
 		int winner = BidList.get(BidList.size()-1).getPlayer(); 
