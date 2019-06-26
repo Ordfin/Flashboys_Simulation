@@ -15,10 +15,10 @@ public class Auction { //this is the right one
 	private double profit; 
 	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
-	private boolean workingMaster = false;
-	
+	private boolean workingMaster = false;	
 	
 	public void getInput() {
+<<<<<<< HEAD
 	
 		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
 		epsilon = Integer.parseInt(JOptionPane.showInputDialog("Enter a minimum tick amount"));
@@ -27,18 +27,73 @@ public class Auction { //this is the right one
 		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
 		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
 		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
+=======
+//		Scanner sc = new Scanner(System.in);
+//
+//		System.out.println("Enter an auction duration(in seconds)");
+//		duration = sc.nextInt();
+//		
+//		System.out.println("Enter a minimum tick amount");
+//		epsilon = sc.nextDouble();
+//		
+//		System.out.println("Enter a minimum increase percent");
+//		iota = sc.nextDouble();
+//		
+//		System.out.println("Enter a smallest initial bid");
+//		s = sc.nextInt();
+//		
+//		System.out.println("Enter a loss function percent");
+//		l= sc.nextDouble();
+//		
+//		System.out.println("Enter how many participants");
+//		amt_players = sc.nextInt();
+//		
+//		System.out.println("Enter oppertune profit");
+//		profit = sc.nextDouble();
+//		
+		players = new ArrayList<>();
+		BidList = new ArrayList<>();
+		String strategy;
+
+		System.out.println("Enter an auction duration(in seconds)");
+		duration = sc.nextInt();
+		
+		System.out.println("Enter a minimum tick amount");
+		epsilon = sc.nextDouble();
+		
+		System.out.println("Enter a minimum increase percent");
+		iota = sc.nextDouble();
+		
+		System.out.println("Enter a smallest initial bid");
+		s = sc.nextInt();
+		
+		System.out.println("Enter a loss function percent");
+		l= sc.nextDouble();
+		
+		System.out.println("Enter oppertune profit");
+		profit = sc.nextDouble();
+		
+		System.out.println("Enter how many participants");
+		amt_players = sc.nextInt();
+>>>>>>> 1a3237710fd79281a46a67d27d00c552c229bebe
 		
 			
 		for (int i=0; i<amt_players; i++) {
 			String strategy = JOptionPane.showInputDialog("Choose strategy for player " + i);
 			Player p = new Player(i, strategy);
 			players.add(p);
+			System.out.println(p.getS());
 		}
 
 		
 	}
 	
 	
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 1a3237710fd79281a46a67d27d00c552c229bebe
 	public void results() {
 		
 		int winner = BidList.get(BidList.size()-1).getPlayer(); 
@@ -68,6 +123,7 @@ public class Auction { //this is the right one
 		results(); 
 
 	}
+	
 }
 
 
