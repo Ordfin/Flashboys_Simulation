@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner; 
+import javax.swing.JOptionPane;
+
 
 public class BlindRaising extends Strategy{
 	  
@@ -29,11 +31,8 @@ public class BlindRaising extends Strategy{
 	
 	public void enterValues() {
 		
-    	Scanner sc = new Scanner(System.in);
-    	System.out.println("Enter fractional increment");
-    	double fi = sc.nextDouble();
-    	System.out.println("Enter time wait interval");
-    	int w = sc.nextInt();
+    	double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
+    	int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
     	
     	this.wait = w;
     	this.f = fi;
