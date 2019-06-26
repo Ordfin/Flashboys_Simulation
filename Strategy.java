@@ -7,17 +7,17 @@ abstract class Strategy {
 		
 		return;
 	}
-//	public void addBid(TreeMap<Double, ArrayList<Bid>> temp, ArrayList<Bid> bidsPlayer, double s, Bid b){
-//		if(temp.containsKey(s)) {
-//			temp.get(s).add(b);	
-//		}
-//		else if (!temp.containsKey(s)) {
-//			ArrayList<Bid> tempList = new ArrayList<>();
-//			tempList.add(b);
-//			temp.put(s, tempList);
-//		}				
-//		bidsPlayer.add(b);
-//	}
+	public void addBid(TreeMap<Double, ArrayList<Bid>> temp, ArrayList<Bid> bidsPlayer, double s, Bid b){
+		if(temp.containsKey(s)) {
+			temp.get(s).add(b);	
+		}
+		else if (!temp.containsKey(s)) {
+			ArrayList<Bid> tempList = new ArrayList<>();
+			tempList.add(b);
+			temp.put(s, tempList);
+		}				
+		bidsPlayer.add(b);
+	}
 
 
 }

@@ -31,15 +31,7 @@ public class BlindRaising extends Strategy{
 						return; 
 				}
 				Bid b = new Bid(t, amt , i);
-				if(temp.containsKey(amt)) {
-					temp.get(amt).add(b);	
-				}
-				else if (!temp.containsKey(amt)) {
-					ArrayList<Bid> tempList = new ArrayList<>();
-					tempList.add(b);
-					temp.put(amt, tempList);
-				}				
-				bidsPlayer.add(b);
+				super.addBid(temp, bidsPlayer, amt, b);
 				k++;
 			}
 		}

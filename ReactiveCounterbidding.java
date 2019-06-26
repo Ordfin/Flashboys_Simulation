@@ -6,30 +6,14 @@ public class ReactiveCounterbidding extends Strategy{
 		
 		if (allBids.isEmpty()) {
 			Bid b = new Bid(t, s, i);
-			if(temp.containsKey(s)) {
-				temp.get(s).add(b);	
-			}
-			else if (!temp.containsKey(s)) {
-				ArrayList<Bid> tempList = new ArrayList<>();
-				tempList.add(b);
-				temp.put(s, tempList);
-			}				
-			bidsPlayer.add(b);
+			super.addBid(temp, bidsPlayer, s, b);
 		}
 		else if(bidsPlayer.isEmpty()) {
 			double a = Math.min(Math.max(allBids.get(allBids.size()-1).getAmount() * (1+
 					iota), allBids.get(allBids.size()-1).getAmount() + epsilon),
 					profit);
 			Bid b = new Bid(t, a, i);
-			if(temp.containsKey(a)) {
-				temp.get(a).add(b);	
-			}
-			else if (!temp.containsKey(a)) {
-				ArrayList<Bid> tempList = new ArrayList<>();
-				tempList.add(b);
-				temp.put(a, tempList);
-			}				
-			bidsPlayer.add(b);
+			super.addBid(temp, bidsPlayer, a, b);
 		}
 		else {
 			if ((allBids.get(allBids.size()-1).getPlayer() != i) 
@@ -38,15 +22,7 @@ public class ReactiveCounterbidding extends Strategy{
 						iota), allBids.get(allBids.size()-1).getAmount() + epsilon),
 						profit + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount());
 				Bid b = new Bid(t, a, i);
-				if(temp.containsKey(a)) {
-					temp.get(a).add(b);	
-				}
-				else if (!temp.containsKey(a)) {
-					ArrayList<Bid> tempList = new ArrayList<>();
-					tempList.add(b);
-					temp.put(a, tempList);
-				}				
-				bidsPlayer.add(b);
+				super.addBid(temp, bidsPlayer, a, b);
 			}
 		}
 	}
