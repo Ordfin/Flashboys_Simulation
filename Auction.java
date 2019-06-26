@@ -104,7 +104,7 @@ public class Auction { //this is the right one
 		for (int i=0; i < players.size(); i++) {
 			if (players.get(i).getId() != winner){
 				
-				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*l; 
+				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*(-l); 
 				System.out.println("The loser is player " + players.get(i).getId() + " with a loss of " + lost);
 			}
 		}
@@ -116,8 +116,8 @@ public class Auction { //this is the right one
 		int time = 0;
 		while (time < duration) {  
 			for (int i=0; i< amt_players; i++) {
-				players.get(i).getS().run (time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids());
-			}
+				players.get(i).getS().run(time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids(), profit);
+			}			
 			time++;	
 		}
 		results(); 

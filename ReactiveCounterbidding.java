@@ -2,8 +2,8 @@ import java.util. *;
 
 public class ReactiveCounterbidding extends Strategy{
 	
-	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, int profit) {	
-		
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit) {	
+
 		if (allBids.isEmpty()) {
 			Bid b = new Bid(t, s, i);  
 			allBids.add(b);
