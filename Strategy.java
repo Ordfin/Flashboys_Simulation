@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 
 abstract class Strategy {
+
 	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit, TreeMap<Double, ArrayList<Bid>> temp) 
 	{
 		

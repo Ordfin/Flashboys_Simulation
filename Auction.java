@@ -5,8 +5,6 @@ import javax.swing.JOptionPane;
 import java.util.TreeMap;
 
 
-
-
 public class Auction { //this is the right one  
 	
 	private double duration; //auction duration
@@ -18,17 +16,20 @@ public class Auction { //this is the right one
 	private double profit = 200; 
 	private int amt_players = 2;
 	private ArrayList<Player> players = new ArrayList<Player>();
+
 	
 	public void getInput() {
 
 	
 		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
-		epsilon = Integer.parseInt(JOptionPane.showInputDialog("Enter a minimum tick amount"));
+		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
 		iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
 		s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
 		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
 		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
 		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
+
+
 
 			
 		for (int i=0; i<amt_players; i++) {
@@ -51,7 +52,7 @@ public class Auction { //this is the right one
 		for (int i=0; i < players.size(); i++) {
 			if (players.get(i).getId() != winner){
 				
-				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*l; 
+				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*(-l); 
 				System.out.println("The loser is player " + players.get(i).getId() + " with a loss of " + lost);
 			}
 		}
@@ -65,6 +66,7 @@ public class Auction { //this is the right one
 		double time = 0;
 		while (time < duration) {  
 			for (int i=0; i< amt_players; i++) {
+
 				players.get(i).getS().run(time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids(), profit, temp);
 			}
 			for (Double  entry : temp.descendingKeySet()) {
@@ -84,7 +86,6 @@ public class Auction { //this is the right one
 		results(); 
 
 	}
-	
 }
 
 
