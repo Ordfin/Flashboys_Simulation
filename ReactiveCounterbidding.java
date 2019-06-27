@@ -7,7 +7,7 @@ public class ReactiveCounterbidding extends Strategy{
 	private double latency;
 	
 
-	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit) {	
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit, TreeMap<Double, ArrayList<Bid>> temp) {	
 		
 		if (allBids.isEmpty()) { //if no bid yet, place first bid
 			Bid b = new Bid(t, s, i);  
