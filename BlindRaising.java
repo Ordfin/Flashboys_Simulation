@@ -18,7 +18,7 @@ public class BlindRaising extends Strategy{
 //			return;
 //		}
 
-
+		
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
