@@ -7,11 +7,12 @@ public class ReactiveCounterbidding extends Strategy{
 	private double latency;
 	
 
-	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit, TreeMap<Double, ArrayList<Bid>> temp) {	
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit) {	
 		
-		if (allBids.isEmpty()) {
-			Bid b = new Bid(t, s, i);
-			super.addBid(temp, bidsPlayer, s, b);
+		if (allBids.isEmpty()) { //if no bid yet, place first bid
+			Bid b = new Bid(t, s, i);  
+			allBids.add(b);
+			bidsPlayer.add(b);
 
 		}
 		else if(bidsPlayer.isEmpty()) { //if you haven't bid yet
@@ -32,7 +33,7 @@ public class ReactiveCounterbidding extends Strategy{
 			}
 		}
 	}
-
+	
 	public void enterValues() {
 			
 	    	this.latency = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
