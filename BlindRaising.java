@@ -42,7 +42,7 @@ public class BlindRaising extends Strategy{
 	
 	public void enterValues() {
 		
-    	double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
+    	double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter percent increase")) * .01;
     	int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
     	
     	this.wait = w;
