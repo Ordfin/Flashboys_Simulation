@@ -23,11 +23,6 @@ public class Bid {
 		
 	}
 	
-	public String toString() {
-		String s = "Player " + Integer.toString(player) +" bid $" + Double.toString(amount) + " at time " + Double.toString(time);
-		//System.out.println(s);
-		return s;	
-	}
 	
 	public double getTime() {
 		return time;
