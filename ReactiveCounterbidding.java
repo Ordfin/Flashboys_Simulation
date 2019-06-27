@@ -2,6 +2,8 @@ import java.util. *;
 
 public class ReactiveCounterbidding extends Strategy{
 	
+	private double latency;
+	
 	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit, TreeMap<Double, ArrayList<Bid>> temp) {	
 		
 		if (allBids.isEmpty()) {
@@ -25,6 +27,10 @@ public class ReactiveCounterbidding extends Strategy{
 				super.addBid(temp, bidsPlayer, a, b);
 			}
 		}
+	}
+	public void enterValues() {
+			
+	    	this.latency = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
 	}
 
 }
