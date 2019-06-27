@@ -27,8 +27,6 @@ public class Auction { //this is the right one
 	public void getInput() {
 
 		try {
-
-=======
 	//		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
 	//		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
 	//		iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
