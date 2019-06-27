@@ -1,7 +1,7 @@
 
 public class Bid {
 
-	private double time; //in econds
+	private double time; //in seconds
 	private double amount;
 	private int player;
 	
@@ -14,7 +14,14 @@ public class Bid {
 		System.out.println("Player " + p +" bid $" + amt + " at time " + t);
 	
 
-	}  
+	} 
+	
+	public String toString() {
+		String s = "Player " + Integer.toString(player) +" bid $" + Double.toString(amount) + " at time " + Double.toString(time);
+		//System.out.println(s);
+		return s;
+		
+	}
 	
 	public String toString() {
 		String s = "Player " + Integer.toString(player) +" bid $" + Double.toString(amount) + " at time " + Double.toString(time);
