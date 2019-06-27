@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Map.Entry;
 
 import javax.swing.JOptionPane;
-import java.util.Random;
 import java.util.TreeMap;
 
 
@@ -17,10 +15,9 @@ public class Auction { //this is the right one
 	private double s; //smallest initial bid
 	private double l; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
-	private double profit; 
-	private int amt_players;
+	private double profit = 200; 
+	private int amt_players = 2;
 	private ArrayList<Player> players = new ArrayList<Player>();
-	private boolean workingMaster = false;	
 	
 	public void getInput() {
 
