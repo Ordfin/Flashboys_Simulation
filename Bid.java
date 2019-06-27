@@ -11,14 +11,15 @@ public class Bid {
 		time = t;
 		amount = amt;
 		player = p; 
-
 		System.out.println("Player " + p +" bid $" + amt + " at time " + t);
+	
 
 	}  
 	
-	public static void trying(int i) {
-		int t;
-		t = i+i;
+	public String toString() {
+		String s = "Player " + Integer.toString(player) +" bid $" + Double.toString(amount) + " at time " + Double.toString(time);
+		//System.out.println(s);
+		return s;	
 	}
 	
 	public double getTime() {

@@ -1,7 +1,13 @@
+import java.awt.TextArea;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
+
 import java.util.TreeMap;
 
 
@@ -13,30 +19,55 @@ public class Auction { //this is the right one
 	private double s; //smallest initial bid
 	private double l; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
-	private double profit = 200; 
-	private int amt_players = 2;
+	private double profit; 
+	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
 	public void getInput() {
 
+		try {
+			duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
+			epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
+			iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
+			s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
+			l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
+			profit = Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
+			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
 	
-		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
-		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
-		iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
-		s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
-		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
-		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
-		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
-
-
-
+	
+	
+				
+			for (int i=0; i<amt_players; i++) {
 			
-		for (int i=0; i<amt_players; i++) {
-			String strategy = JOptionPane.showInputDialog("Choose strategy for player " + i);
-			Player p = new Player(i, strategy);
-			players.add(p);
+				Object[] options1 = { "Reactive Counterbidding", "Blind Raising"};
+		
+		        JPanel panel = new JPanel();
+		        panel.add(new JLabel("Select Strategy"));
+		        
+		        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
+		                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
+		                null, options1, null);
+		        if (result == JOptionPane.YES_OPTION){
+		        	String s = "ReactiveCounterbidding";
+		        	Player p = new Player(i,s);
+		    		players.add(p);
+	
+		        }
+		        if (result == JOptionPane.NO_OPTION){ 
+		        	String s = "BlindRaising";
+		        	Player p = new Player(i,s);
+		    		players.add(p);
+	
+		        }
+	
+	        }
 		}
+		catch(Exception e) {
+			System.exit(0);
+		}
+	
+		
 
 		
 	}
@@ -69,7 +100,7 @@ public class Auction { //this is the right one
 
 				players.get(i).getS().run(time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids(), profit, temp);
 			}
-			for (Double  entry : temp.descendingKeySet()) {
+			for (Double  entry : temp.keySet()) {
 				  ArrayList<Bid> values = temp.get(entry);
 				  if(values.size() > 1) Collections.shuffle(values);
 				  for(int i=0; i<values.size(); i++) {
@@ -78,16 +109,17 @@ public class Auction { //this is the right one
 			}
 			temp.clear();
 			time++;	
-		}
-		System.out.println();
-		for (int i=0; i<BidList.size(); i++) {
-			System.out.println("Player " + BidList.get(i).getPlayer() +" bid $" + BidList.get(i).getAmount() + " at time " + BidList.get(i).getTime());
-		}
-		results(); 
-
+		} 
+		
+		  String output = ""; 
+			  for(int j = 0; j<BidList.size(); j++){ 
+				  String everything = BidList.get(j).toString(); 
+				  output += everything +" "+ "\n"; 
+			  }
+		  JOptionPane.showMessageDialog(null, output);
+		 
+			results(); 
 	}
-}
-
-
+}	
 
 

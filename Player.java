@@ -23,7 +23,7 @@ public class Player {
             break; 
         case "ReactiveCounterbidding": 
             this.strategy = new ReactiveCounterbidding(); 
-	    ((ReactiveCounterbidding) strategy).enterValues();
+            ((ReactiveCounterbidding) strategy).enterValues();
 
             break; 
 		}
