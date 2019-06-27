@@ -7,11 +7,11 @@ import java.util.TreeMap;
 
 public class Auction { //this is the right one  
 	
-	private double duration; //auction duration
-	private double epsilon; //minimum tick 
-	private double iota; //minimum increase percent
-	private double s; //smallest initial bid
-	private double l; //loss function
+	private double duration = 15; //auction duration
+	private double epsilon = 1; //minimum tick 
+	private double iota = .15; //minimum increase percent
+	private double s = 3; //smallest initial bid
+	private double l = .9; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
 	private double profit = 200; 
 	private int amt_players = 2;
@@ -21,14 +21,14 @@ public class Auction { //this is the right one
 	public void getInput() {
 
 	
-		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
-		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
-		iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
-		s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
-		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
-		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
-		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
-
+//		duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
+//		epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
+//		iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
+//		s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
+//		l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
+//		profit = Integer.parseInt(JOptionPane.showInputDialog("Enter oppertune profit"));
+//		amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
+//
 
 
 			
