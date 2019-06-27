@@ -29,9 +29,9 @@ public class Auction { //this is the right one
 		try {
 			duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
 			epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
-			iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"));
+			iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent"))*.01;
 			s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
-			l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"));
+			l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent"))*.01;
 			profit = Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
 			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
 	
