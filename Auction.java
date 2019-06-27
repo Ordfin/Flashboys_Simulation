@@ -43,7 +43,6 @@ public class Auction { //this is the right one
 	
 	        JPanel panel = new JPanel();
 	        panel.add(new JLabel("Select Strategy"));
-	        JTextField textField = new JTextField(10);
 	
 	        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
 	                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
