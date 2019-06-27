@@ -1,5 +1,7 @@
 import java.util.ArrayList;
-import java.util.Scanner; 
+import java.util.Scanner;
+import java.util.TreeMap;
+
 import javax.swing.JOptionPane;
 
 
@@ -7,16 +9,14 @@ public class BlindRaising extends Strategy{
 	  
 	private double f;
 	private int wait;
-	private static int k=0;
+	private int k = 1;
 	
 	
 
-	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit) {	
-
-
-		if (allBids.get(allBids.size()-1).getAmount() >= profit + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount()) {
-			return;
-		}
+	public void run(double t, double D, double s, int i, double iota, double epsilon, double loss_func, ArrayList<Bid> allBids, ArrayList<Bid> bidsPlayer, double profit, TreeMap<Double, ArrayList<Bid>> temp) {	
+//		if (allBids.get(allBids.size()-1).getAmount() >= profit + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount()) {
+//			return;
+//		}
 
 
 		if(t<D) {
@@ -33,8 +33,7 @@ public class BlindRaising extends Strategy{
 						return; 
 				}
 				Bid b = new Bid(t, amt , i);
-				allBids.add(b);
-				bidsPlayer.add(b);
+				super.addBid(temp, bidsPlayer, amt, b);
 				k++;
 			}
 		}
