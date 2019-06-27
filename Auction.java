@@ -11,10 +11,10 @@ public class Auction { //this is the right one
 	private double epsilon = 1; //minimum tick 
 	private double iota = .15; //minimum increase percent
 	private double s = 3; //smallest initial bid
-	private double l = .9; //loss function
+	private double l = .1; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
 	private double profit = 200; 
-	private int amt_players = 2;
+	private int amt_players = 4;
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
