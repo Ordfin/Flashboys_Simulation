@@ -21,7 +21,7 @@ public class BlindRaising extends Strategy{
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
-				double amt = Math.pow(s *(1+f), k);
+				double amt = Math.pow((1+f), k)*s;
 
 				if (bidsPlayer.isEmpty()) {
 					if (amt >= profit) return;

@@ -1,9 +1,12 @@
+import java.awt.TextArea;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 
 import java.util.TreeMap;
 
@@ -16,8 +19,8 @@ public class Auction { //this is the right one
 	private double s = 2; //smallest initial bid
 	private double l = .1; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
-	private double profit = 200; 
-	private int amt_players = 2;
+	private double profit; 
+	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
@@ -41,7 +44,7 @@ public class Auction { //this is the right one
 		
 		        JPanel panel = new JPanel();
 		        panel.add(new JLabel("Select Strategy"));
-		
+
 		        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
 		                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
 		                null, options1, null);
@@ -57,11 +60,14 @@ public class Auction { //this is the right one
 		    		players.add(p);
 	
 		        }
+	
 	        }
 		}
 		catch(Exception e) {
 			System.exit(0);
 		}
+	
+		
 
 
 		
@@ -96,22 +102,26 @@ public class Auction { //this is the right one
 				players.get(i).getS().run(time, duration, s, i, iota, epsilon, l, BidList, players.get(i).getBids(), profit, temp);
 			}
 			for (Double  entry : temp.keySet()) {
-				    ArrayList<Bid> values = temp.get(entry);
-				    if(values.size() > 1) Collections.shuffle(values);
-				    for(int i=0; i<values.size(); i++) {
-				    	BidList.add(values.get(i));
-				    }
+
+				  ArrayList<Bid> values = temp.get(entry);
+				  if(values.size() > 1) Collections.shuffle(values);
+				  for(int i=0; i<values.size(); i++) {
+					  BidList.add(values.get(i));
+				  }
 			}
 			temp.clear();
 			time++;	
-		}
-		System.out.println();
-		for (int i=0; i<BidList.size(); i++) {
-			System.out.println(BidList.get(i).toString());
-		}
+		} 
 		
-		results(); 
-
+		  String output = ""; 
+			  for(int j = 0; j<BidList.size(); j++){ 
+				  String everything = BidList.get(j).toString(); 
+				  output += everything +" "+ "\n"; 
+			  }
+		  JOptionPane.showMessageDialog(null, output);
+		 
+			results(); 
 	}
-}
+}	
+
 
