@@ -1,7 +1,10 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 import java.util.TreeMap;
 
 
@@ -33,10 +36,29 @@ public class Auction { //this is the right one
 
 			
 		for (int i=0; i<amt_players; i++) {
-			String strategy = JOptionPane.showInputDialog("Choose strategy for player " + i);
-			Player p = new Player(i, strategy);
-			players.add(p);
-		}
+		
+			Object[] options1 = { "Reactive Counterbidding", "Blind Raising"};
+	
+	        JPanel panel = new JPanel();
+	        panel.add(new JLabel("Select Strategy"));
+	
+	        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
+	                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
+	                null, options1, null);
+	        if (result == JOptionPane.YES_OPTION){
+	        	String s = "ReactiveCounterbidding";
+	        	Player p = new Player(i,s);
+	    		players.add(p);
+
+	        }
+	        if (result == JOptionPane.NO_OPTION){ 
+	        	String s = "BlindRaising";
+	        	Player p = new Player(i,s);
+	    		players.add(p);
+
+	        }
+
+        }
 
 		
 	}
@@ -87,7 +109,4 @@ public class Auction { //this is the right one
 
 	}
 }
-
-
-
 
