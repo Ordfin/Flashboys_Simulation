@@ -13,26 +13,38 @@ public class ReactiveCounterbidding extends Strategy{
 			Bid b = new Bid(t, s, i);  
 			allBids.add(b);
 			bidsPlayer.add(b);
+		}
+		
+		else {
+			int counter = 0;
+			while(counter <(allBids.size())){
+				if((allBids.get(counter).getTime() + latency) == t){
+					 Bid pb = allBids.get(counter); //previous bid
+			
+					 if(bidsPlayer.isEmpty()) { //if you haven't bid yet
+						double a = Math.min(Math.max(pb.getAmount() * (1+
+								iota), pb.getAmount() + epsilon),
+								profit);
+						Bid b = new Bid(t, a, i);
+						super.addBid(temp, bidsPlayer, a, b);
+					}
+					else { //if both players have bid
+						if ((pb.getPlayer() != i) 
+								&& (pb.getAmount() > bidsPlayer.get(bidsPlayer.size()-1).getAmount())) {
+							double a = Math.min(Math.max(pb.getAmount() * (1+
+									iota), pb.getAmount() + epsilon),
+									profit + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount());
+							Bid b = new Bid(t, a, i);
+							super.addBid(temp, bidsPlayer, a, b);
+							}//&&
+					}//else
+				}//if==t
+				counter++;
+			}//while
+		
+		}//else
+	}//run
 
-		}
-		else if(bidsPlayer.isEmpty()) { //if you haven't bid yet
-			double a = Math.min(Math.max(allBids.get(allBids.size()-1).getAmount() * (1+
-					iota), allBids.get(allBids.size()-1).getAmount() + epsilon),
-					profit);
-			Bid b = new Bid(t, a, i);
-			super.addBid(temp, bidsPlayer, a, b);
-		}
-		else { //if both players have bid
-			if ((allBids.get(allBids.size()-1).getPlayer() != i) 
-					&& (allBids.get(allBids.size()-1).getAmount() > bidsPlayer.get(bidsPlayer.size()-1).getAmount())) {
-				double a = Math.min(Math.max(allBids.get(allBids.size()-1).getAmount() * (1+
-						iota), allBids.get(allBids.size()-1).getAmount() + epsilon),
-						profit + loss_func * bidsPlayer.get(bidsPlayer.size()-1).getAmount());
-				Bid b = new Bid(t, a, i);
-				super.addBid(temp, bidsPlayer, a, b);
-			}
-		}
-	}
 	
 	public void enterValues() {
 			
@@ -40,4 +52,3 @@ public class ReactiveCounterbidding extends Strategy{
 	}
 
 }
-
