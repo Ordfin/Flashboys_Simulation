@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 import javax.swing.JOptionPane;
@@ -17,7 +18,7 @@ public class BlindRaising extends Strategy{
 //			return;
 //		}
 
-		
+
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
@@ -40,18 +41,12 @@ public class BlindRaising extends Strategy{
 	}
 	
 	public void enterValues() {
-		try {
-			double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
-			int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
-			this.wait = w;
- 
-			this.f = fi;
-		}
-		catch(Exception e) {
-			System.exit(0);
-		}	
+		
+    	double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter percent increase")) * .01;
+    	int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
     	
-    	
+    	this.wait = w;
+    	this.f = fi;
 	}
 	
 	
