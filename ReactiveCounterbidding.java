@@ -36,7 +36,7 @@ public class ReactiveCounterbidding extends Strategy{
 	
 	public void enterValues() {
 			
-	    	this.latency = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
+	    	this.latency = Double.parseDouble(JOptionPane.showInputDialog("Enter latency"));
 	}
 
 }
