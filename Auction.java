@@ -55,13 +55,13 @@ public class Auction { //this is the right one
 		                null, options1, null);
 		        if (result == JOptionPane.YES_OPTION){
 		        	String s = "ReactiveCounterbidding";
-		        	Player p = new Player(i,s);
+		        	Player p = new Player(i,s, 2);
 		    		players.add(p);
 	
 		        }
 		        if (result == JOptionPane.NO_OPTION){ 
 		        	String s = "BlindRaising";
-		        	Player p = new Player(i,s);
+		        	Player p = new Player(i,s, 3);
 		    		players.add(p);
 	
 		        }
