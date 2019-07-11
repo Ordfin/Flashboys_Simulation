@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 import javax.swing.JOptionPane;
@@ -7,7 +8,7 @@ import javax.swing.JOptionPane;
 public class BlindRaising extends Strategy{
 	  
 	private double f;
-	private int wait;
+	private double wait;
 	private int k = 0;
 	
 	
@@ -17,7 +18,7 @@ public class BlindRaising extends Strategy{
 //			return;
 //		}
 
-		
+
 		if(t<D) {
 			// bids (starting_amount * (1+f)^k) every "wait" seconds
 			if (t % wait == 0) {
@@ -39,19 +40,18 @@ public class BlindRaising extends Strategy{
 		return;	
 	}
 	
-	public void enterValues() {
-		try {
-			double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter fractional increment"));
-			int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
-			this.wait = w;
- 
-			this.f = fi;
-		}
-		catch(Exception e) {
-			System.exit(0);
-		}	
+	public void enterValues(int n) throws Exception {
+		
+		Files f = new Files();
+		System.out.println("t1");
+
+		ArrayList<Double> temp = f.read(n);
+		System.out.println("t2");
+    	double fi = temp.get(1) * .01;
+    	double w = temp.get(0);
     	
-    	
+    	this.wait = w;
+    	this.f = fi;
 	}
 	
 	

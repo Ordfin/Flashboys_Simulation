@@ -9,7 +9,7 @@ public class Player {
 	private ArrayList<Bid> bids;
 
 	
-	public Player(int id, String strat) {
+	public Player(int id, String strat, int n) throws Exception {
 		
 		
 		this.id = id;
@@ -18,7 +18,7 @@ public class Player {
 		
         case "BlindRaising":
             this.strategy = new BlindRaising();
-            ((BlindRaising) strategy).enterValues();
+            ((BlindRaising) strategy).enterValues(n);
             break; 
         case "ReactiveCounterbidding": 
             this.strategy = new ReactiveCounterbidding(); 
