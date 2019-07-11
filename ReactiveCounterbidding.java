@@ -1,6 +1,9 @@
 import java.util. *;
-
+import org.apache.commons.math3.distribution.PoissonDistribution;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 
 public class ReactiveCounterbidding extends Strategy{
 	
@@ -19,7 +22,7 @@ public class ReactiveCounterbidding extends Strategy{
 			int counter = 0;
 			while(counter <(allBids.size())){
 				if((allBids.get(counter).getTime() + latency) == t){
-					 Bid pb = allBids.get(counter); //previous bid
+					 Bid pb = allBids.get(counter); //previou bid
 			
 					 if(bidsPlayer.isEmpty()) { //if you haven't bid yet
 						double a = Math.min(Math.max(pb.getAmount() * (1+
@@ -48,7 +51,23 @@ public class ReactiveCounterbidding extends Strategy{
 	
 	public void enterValues() {
 			
-	    	this.latency = Double.parseDouble(JOptionPane.showInputDialog("Enter latency"));
+			Object[] options1 = { "Latency", "No Latency"};
+	
+	        JPanel panel = new JPanel();
+	        panel.add(new JLabel("Select latency"));
+	        
+	        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
+	                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
+	                null, options1, null);
+	        if (result == JOptionPane.YES_OPTION){
+	        	PoissonDistribution pdist = new PoissonDistribution(3);
+	    		this.latency = pdist.sample(); //Generate a random value sampled from this distribution.
+
+	        }
+	        if (result == JOptionPane.NO_OPTION){ 
+		    	this.latency = 0;
+	        }
+	     System.out.println("Latency of player: " + this.latency);
 	}
 
 }

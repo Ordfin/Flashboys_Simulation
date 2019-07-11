@@ -1,38 +1,45 @@
-import java.awt.TextArea;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 
+//import java.awt.TextArea;
+import java.util.ArrayList;
+//import java.util.Arrays;
+import java.util.Collections;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-
-
 import java.util.TreeMap;
+import org.apache.commons.math3.distribution.PoissonDistribution;
 
 
 public class Auction { //this is the right one  
-	
+
 	private double duration; //auction duration
-	private double epsilon; //minimum tick 
-	private double iota; //minimum increase percent
-	private double s; //smallest initial bid
-	private double l; //loss function
+	private double epsilon = .05; //minimum tick 
+	private double iota = .125; //minimum increase percent
+	private double s = .5; //smallest initial bid
+	private double l = .10; //loss function
 	private ArrayList<Bid> BidList = new ArrayList<Bid>();
-	private double profit; 
+	private double profit = 30; 
 	private int amt_players;
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
-	public void getInput() {
+
+		PoissonDistribution pd = new PoissonDistribution(15);
+		duration = pd.sample(); //Generate a random value sampled from this distribution.
 
 		try {
-			duration = Integer.parseInt((JOptionPane.showInputDialog("Enter an auction duration(in seconds)")));
-			epsilon = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount"));
-			iota = Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum increase percent")) * .01;
-			s = Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"));
-			l= Double.parseDouble(JOptionPane.showInputDialog("Enter a loss function percent")) * .01;
-			profit = Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
+			/*
+			 * duration = Integer.parseInt((JOptionPane.
+			 * showInputDialog("Enter an auction duration(in seconds)"))); epsilon =
+			 * Double.parseDouble(JOptionPane.showInputDialog("Enter a minimum tick amount")
+			 * ); iota = Double.parseDouble(JOptionPane.
+			 * showInputDialog("Enter a minimum increase percent")) * .01; s =
+			 * Integer.parseInt(JOptionPane.showInputDialog("Enter a smallest initial bid"))
+			 * ; l= Double.parseDouble(JOptionPane.
+			 * showInputDialog("Enter a loss function percent")) * .01; profit =
+			 * Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
+			 */
+
 			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
 	
 	
@@ -51,12 +58,15 @@ public class Auction { //this is the right one
 		        if (result == JOptionPane.YES_OPTION){
 		        	String s = "ReactiveCounterbidding";
 		        	Player p = new Player(i,s, 5);
-		    		players.add(p);
+
+		    		  players.add(p);
 	
 		        }
 		        if (result == JOptionPane.NO_OPTION){ 
 		        	String s = "BlindRaising";
+
 		        	Player p = new Player(i,s, 7);
+
 		    		players.add(p);
 	
 		        }
@@ -93,6 +103,9 @@ public class Auction { //this is the right one
 				output += "The loser is player " + players.get(i).getId() + " with a loss of " + lost + "\n";
 		
 			  JOptionPane.showMessageDialog(null, output);
+
+			  System.out.println("Duration was " + duration);
+
 			}
 		}
 
@@ -116,11 +129,15 @@ public class Auction { //this is the right one
 				  }
 			}
 			temp.clear();
-			time++;	
+
+			time+= .5;	
+
 		} 
 		
 		 
 		 
 			results(); 
 	}
-}
+
+}	
+

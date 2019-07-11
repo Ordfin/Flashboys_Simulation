@@ -9,7 +9,9 @@ public class BlindRaising extends Strategy{
 	  
 	private double f;
 	private double wait;
-	private int k = 0;
+
+	private double k = 0;
+
 	
 	
 
