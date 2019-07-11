@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 public class BlindRaising extends Strategy{
 	  
 	private double f;
-	private int wait;
-	private int k = 0;
+	private double wait;
+	private double k = 0;
 	
 	
 
