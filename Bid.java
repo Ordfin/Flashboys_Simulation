@@ -11,7 +11,7 @@ public class Bid {
 		time = t;
 		amount = amt;
 		player = p; 
-		System.out.println("Player " + p +" bid $" + amt + " at time " + t);
+		//System.out.println("Player " + p +" bid $" + amt + " at time " + t);
 	
 
 	} 

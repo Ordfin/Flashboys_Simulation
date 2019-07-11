@@ -1,3 +1,4 @@
+
 //import java.awt.TextArea;
 import java.util.ArrayList;
 //import java.util.Arrays;
@@ -22,7 +23,7 @@ public class Auction { //this is the right one
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
-	public void getInput() {
+
 		PoissonDistribution pd = new PoissonDistribution(15);
 		duration = pd.sample(); //Generate a random value sampled from this distribution.
 
@@ -38,6 +39,7 @@ public class Auction { //this is the right one
 			 * showInputDialog("Enter a loss function percent")) * .01; profit =
 			 * Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
 			 */
+
 			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
 	
 	
@@ -55,13 +57,16 @@ public class Auction { //this is the right one
 		                null, options1, null);
 		        if (result == JOptionPane.YES_OPTION){
 		        	String s = "ReactiveCounterbidding";
-		        	Player p = new Player(i,s);
-		    		players.add(p);
+		        	Player p = new Player(i,s, 5);
+
+		    		  players.add(p);
 	
 		        }
 		        if (result == JOptionPane.NO_OPTION){ 
 		        	String s = "BlindRaising";
-		        	Player p = new Player(i,s);
+
+		        	Player p = new Player(i,s, 7);
+
 		    		players.add(p);
 	
 		        }
@@ -98,7 +103,9 @@ public class Auction { //this is the right one
 				output += "The loser is player " + players.get(i).getId() + " with a loss of " + lost + "\n";
 		
 			  JOptionPane.showMessageDialog(null, output);
+
 			  System.out.println("Duration was " + duration);
+
 			}
 		}
 
@@ -122,11 +129,15 @@ public class Auction { //this is the right one
 				  }
 			}
 			temp.clear();
+
 			time+= .5;	
+
 		} 
 		
 		 
 		 
 			results(); 
 	}
+
 }	
+

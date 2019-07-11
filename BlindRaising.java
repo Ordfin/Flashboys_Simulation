@@ -9,7 +9,9 @@ public class BlindRaising extends Strategy{
 	  
 	private double f;
 	private double wait;
+
 	private double k = 0;
+
 	
 	
 
@@ -40,10 +42,15 @@ public class BlindRaising extends Strategy{
 		return;	
 	}
 	
-	public void enterValues() {
+	public void enterValues(int n) throws Exception {
 		
-    	double fi = Double.parseDouble(JOptionPane.showInputDialog("Enter percent increase")) * .01;
-    	int w = Integer.parseInt(JOptionPane.showInputDialog("Enter time wait interval"));
+		Files f = new Files();
+		System.out.println("t1");
+
+		ArrayList<Double> temp = f.read(n);
+		System.out.println("t2");
+    	double fi = temp.get(1) * .01;
+    	double w = temp.get(0);
     	
     	this.wait = w;
     	this.f = fi;
