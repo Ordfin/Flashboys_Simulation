@@ -1,0 +1,539 @@
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.55 at time 1.0 
+Player 1 bid $0.6050000000000001 at time 2.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 0 bid $0.6655000000000002 at time 3.0 
+Player 1 bid $0.6655000000000002 at time 3.0 
+Player 0 bid $0.7320500000000002 at time 4.0 
+Player 1 bid $0.7320500000000002 at time 4.0 
+Player 0 bid $0.8052550000000003 at time 5.0 
+Player 1 bid $0.8052550000000003 at time 5.0 
+Player 1 bid $0.8857805000000004 at time 6.0 
+Player 0 bid $0.8857805000000004 at time 6.0 
+Player 0 bid $0.9743585500000006 at time 7.0 
+Player 1 bid $0.9743585500000006 at time 7.0 
+Player 1 bid $1.0717944050000008 at time 8.0 
+Player 0 bid $1.0717944050000008 at time 8.0 
+Player 0 bid $1.178973845500001 at time 9.0 
+Player 1 bid $1.178973845500001 at time 9.0 
+Player 0 bid $1.2968712300500012 at time 10.0 
+Player 1 bid $1.2968712300500012 at time 10.0 
+Player 1 bid $1.4265583530550012 at time 11.0 
+Player 0 bid $1.4265583530550012 at time 11.0 
+Player 1 bid $1.5692141883605015 at time 12.0 
+Player 0 bid $1.5692141883605015 at time 12.0 
+Player 1 bid $1.726135607196552 at time 13.0 
+Player 0 bid $1.726135607196552 at time 13.0 
+Player 1 bid $1.8987491679162072 at time 14.0 
+Player 0 bid $1.8987491679162072 at time 14.0 
+Player 0 bid $2.088624084707828 at time 15.0 
+Player 1 bid $2.088624084707828 at time 15.0 
+
+The winner is player 1 with a profit of 27.911375915292172
+The loser is player 0 with a loss of -0.20886240847078283
+Duration was 16.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.56 at time 1.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 1 bid $0.6272000000000001 at time 2.0 
+Player 0 bid $0.6655000000000002 at time 3.0 
+Player 1 bid $0.7024640000000002 at time 3.0 
+Player 0 bid $0.7320500000000002 at time 4.0 
+Player 1 bid $0.7867596800000003 at time 4.0 
+Player 0 bid $0.8052550000000003 at time 5.0 
+Player 1 bid $0.8811708416000004 at time 5.0 
+Player 0 bid $0.8857805000000004 at time 6.0 
+Player 1 bid $0.9869113425920005 at time 6.0 
+
+The winner is player 1 with a profit of 29.013088657407998
+The loser is player 0 with a loss of -0.08857805000000005
+Duration was 7.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.5700000000000001 at time 1.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 1 bid $0.6498000000000002 at time 2.0 
+Player 0 bid $0.6655000000000002 at time 3.0 
+Player 1 bid $0.7407720000000002 at time 3.0 
+Player 1 bid $0.8444800800000004 at time 4.0 
+Player 1 bid $0.9627072912000005 at time 5.0 
+Player 1 bid $1.0974863119680007 at time 6.0 
+Player 1 bid $1.251134395643521 at time 7.0 
+Player 1 bid $1.426293211033614 at time 8.0 
+Player 1 bid $1.6259742605783203 at time 9.0 
+Player 1 bid $1.8536106570592852 at time 10.0 
+Player 1 bid $2.113116149047585 at time 11.0 
+Player 1 bid $2.4089524099142476 at time 12.0 
+Player 1 bid $2.7462057473022425 at time 13.0 
+Player 1 bid $3.1306745519245567 at time 14.0 
+Player 1 bid $3.568968989193995 at time 15.0 
+Player 1 bid $4.068624647681155 at time 16.0 
+Player 1 bid $4.638232098356517 at time 17.0 
+Player 1 bid $5.28758459212643 at time 18.0 
+Player 1 bid $6.027846435024131 at time 19.0 
+Player 1 bid $6.87174493592751 at time 20.0 
+Player 1 bid $7.833789226957363 at time 21.0 
+Player 1 bid $8.930519718731395 at time 22.0 
+
+The winner is player 1 with a profit of 21.069480281268604
+The loser is player 0 with a loss of -0.06655000000000003
+Duration was 23.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.58 at time 1.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 1 bid $0.6728 at time 2.0 
+Player 1 bid $0.7804479999999998 at time 3.0 
+Player 1 bid $0.9053196799999997 at time 4.0 
+Player 1 bid $1.0501708287999996 at time 5.0 
+Player 1 bid $1.2181981614079995 at time 6.0 
+Player 1 bid $1.4131098672332794 at time 7.0 
+Player 1 bid $1.6392074459906039 at time 8.0 
+Player 1 bid $1.9014806373491004 at time 9.0 
+Player 1 bid $2.205717539324956 at time 10.0 
+Player 1 bid $2.558632345616949 at time 11.0 
+Player 1 bid $2.968013520915661 at time 12.0 
+
+The winner is player 1 with a profit of 27.03198647908434
+The loser is player 0 with a loss of -0.06050000000000001
+Duration was 13.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.59 at time 1.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 1 bid $0.6961999999999999 at time 2.0 
+Player 1 bid $0.8215159999999999 at time 3.0 
+Player 1 bid $0.9693888799999998 at time 4.0 
+Player 1 bid $1.1438788783999998 at time 5.0 
+Player 1 bid $1.3497770765119996 at time 6.0 
+Player 1 bid $1.5927369502841595 at time 7.0 
+Player 1 bid $1.879429601335308 at time 8.0 
+Player 1 bid $2.2177269295756634 at time 9.0 
+Player 1 bid $2.6169177768992826 at time 10.0 
+Player 1 bid $3.0879629767411534 at time 11.0 
+Player 1 bid $3.6437963125545605 at time 12.0 
+Player 1 bid $4.299679648814381 at time 13.0 
+Player 1 bid $5.07362198560097 at time 14.0 
+Player 1 bid $5.986873943009144 at time 15.0 
+Player 1 bid $7.06451125275079 at time 16.0 
+Player 1 bid $8.336123278245932 at time 17.0 
+Player 1 bid $9.8366254683302 at time 18.0 
+Player 1 bid $11.607218052629634 at time 19.0 
+Player 1 bid $13.696517302102967 at time 20.0 
+Player 1 bid $16.1618904164815 at time 21.0 
+
+The winner is player 1 with a profit of 13.838109583518499
+The loser is player 0 with a loss of -0.06050000000000001
+Duration was 22.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.6 at time 1.0 
+Player 0 bid $0.6050000000000001 at time 2.0 
+Player 1 bid $0.72 at time 2.0 
+Player 1 bid $0.8639999999999999 at time 3.0 
+Player 1 bid $1.0368 at time 4.0 
+Player 1 bid $1.2441599999999997 at time 5.0 
+Player 1 bid $1.4929919999999997 at time 6.0 
+Player 1 bid $1.7915903999999996 at time 7.0 
+Player 1 bid $2.1499084799999992 at time 8.0 
+
+The winner is player 1 with a profit of 27.85009152
+The loser is player 0 with a loss of -0.06050000000000001
+Duration was 9.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.61 at time 1.0 
+Player 1 bid $0.7442 at time 2.0 
+Player 1 bid $0.907924 at time 3.0 
+Player 1 bid $1.1076672799999998 at time 4.0 
+Player 1 bid $1.3513540815999998 at time 5.0 
+Player 1 bid $1.6486519795519998 at time 6.0 
+Player 1 bid $2.0113554150534396 at time 7.0 
+Player 1 bid $2.4538536063651963 at time 8.0 
+Player 1 bid $2.9937013997655395 at time 9.0 
+Player 1 bid $3.6523157077139583 at time 10.0 
+Player 1 bid $4.455825163411029 at time 11.0 
+Player 1 bid $5.436106699361455 at time 12.0 
+Player 1 bid $6.632050173220975 at time 13.0 
+Player 1 bid $8.091101211329589 at time 14.0 
+Player 1 bid $9.871143477822098 at time 15.0 
+Player 1 bid $12.04279504294296 at time 16.0 
+
+The winner is player 1 with a profit of 17.95720495705704
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 17.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.62 at time 1.0 
+Player 1 bid $0.7688 at time 2.0 
+Player 1 bid $0.9533119999999999 at time 3.0 
+Player 1 bid $1.1821068799999999 at time 4.0 
+Player 1 bid $1.4658125311999999 at time 5.0 
+Player 1 bid $1.817607538688 at time 6.0 
+Player 1 bid $2.25383334797312 at time 7.0 
+Player 1 bid $2.7947533514866687 at time 8.0 
+Player 1 bid $3.465494155843469 at time 9.0 
+Player 1 bid $4.297212753245901 at time 10.0 
+Player 1 bid $5.328543814024918 at time 11.0 
+Player 1 bid $6.607394329390898 at time 12.0 
+Player 1 bid $8.193168968444715 at time 13.0 
+Player 1 bid $10.159529520871445 at time 14.0 
+Player 1 bid $12.597816605880592 at time 15.0 
+Player 1 bid $15.621292591291933 at time 16.0 
+Player 1 bid $19.370402813202 at time 17.0 
+Player 1 bid $24.01929948837048 at time 18.0 
+
+The winner is player 1 with a profit of 5.9807005116295215
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 19.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.63 at time 1.0 
+Player 1 bid $0.7938000000000001 at time 2.0 
+Player 1 bid $1.000188 at time 3.0 
+Player 1 bid $1.2602368800000001 at time 4.0 
+Player 1 bid $1.5878984688 at time 5.0 
+Player 1 bid $2.000752070688 at time 6.0 
+Player 1 bid $2.52094760906688 at time 7.0 
+Player 1 bid $3.176393987424269 at time 8.0 
+Player 1 bid $4.002256424154579 at time 9.0 
+Player 1 bid $5.04284309443477 at time 10.0 
+Player 1 bid $6.35398229898781 at time 11.0 
+Player 1 bid $8.00601769672464 at time 12.0 
+Player 1 bid $10.087582297873046 at time 13.0 
+Player 1 bid $12.71035369532004 at time 14.0 
+Player 1 bid $16.01504565610325 at time 15.0 
+Player 1 bid $20.178957526690095 at time 16.0 
+Player 1 bid $25.42548648362952 at time 17.0 
+Player 1 bid $32.03611296937319 at time 18.0 
+
+The winner is player 1 with a profit of -2.0361129693731925
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 24.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.64 at time 1.0 
+Player 1 bid $0.8192 at time 2.0 
+Player 1 bid $1.0485760000000002 at time 3.0 
+Player 1 bid $1.34217728 at time 4.0 
+Player 1 bid $1.7179869184000003 at time 5.0 
+Player 1 bid $2.1990232555520004 at time 6.0 
+Player 1 bid $2.8147497671065604 at time 7.0 
+Player 1 bid $3.6028797018963976 at time 8.0 
+Player 1 bid $4.611686018427389 at time 9.0 
+Player 1 bid $5.902958103587058 at time 10.0 
+Player 1 bid $7.5557863725914345 at time 11.0 
+
+The winner is player 1 with a profit of 22.444213627408566
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 12.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.65 at time 1.0 
+Player 1 bid $0.8450000000000001 at time 2.0 
+Player 1 bid $1.0985 at time 3.0 
+Player 1 bid $1.4280500000000003 at time 4.0 
+Player 1 bid $1.8564650000000003 at time 5.0 
+Player 1 bid $2.4134045000000004 at time 6.0 
+Player 1 bid $3.137425850000001 at time 7.0 
+Player 1 bid $4.078653605000001 at time 8.0 
+Player 1 bid $5.3022496865000015 at time 9.0 
+Player 1 bid $6.892924592450003 at time 10.0 
+
+The winner is player 1 with a profit of 23.10707540755
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 11.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.66 at time 1.0 
+Player 1 bid $0.8712000000000001 at time 2.0 
+Player 1 bid $1.1499840000000001 at time 3.0 
+Player 1 bid $1.5179788800000003 at time 4.0 
+Player 1 bid $2.0037321216000006 at time 5.0 
+Player 1 bid $2.644926400512001 at time 6.0 
+Player 1 bid $3.4913028486758413 at time 7.0 
+Player 1 bid $4.60851976025211 at time 8.0 
+Player 1 bid $6.083246083532786 at time 9.0 
+Player 1 bid $8.029884830263278 at time 10.0 
+Player 1 bid $10.599447975947527 at time 11.0 
+Player 1 bid $13.991271328250738 at time 12.0 
+Player 1 bid $18.468478153290974 at time 13.0 
+
+The winner is player 1 with a profit of 11.531521846709026
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 14.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.67 at time 1.0 
+Player 1 bid $0.8978000000000002 at time 2.0 
+Player 1 bid $1.2030520000000002 at time 3.0 
+Player 1 bid $1.6120896800000004 at time 4.0 
+Player 1 bid $2.1602001712000005 at time 5.0 
+Player 1 bid $2.894668229408001 at time 6.0 
+Player 1 bid $3.8788554274067217 at time 7.0 
+Player 1 bid $5.197666272725007 at time 8.0 
+Player 1 bid $6.9648728054515106 at time 9.0 
+Player 1 bid $9.332929559305024 at time 10.0 
+Player 1 bid $12.506125609468732 at time 11.0 
+Player 1 bid $16.758208316688105 at time 12.0 
+Player 1 bid $22.45599914436206 at time 13.0 
+Player 1 bid $30.091038853445163 at time 14.0 
+
+The winner is player 1 with a profit of -0.09103885344516272
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 16.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.6799999999999999 at time 1.0 
+Player 1 bid $0.9247999999999998 at time 2.0 
+Player 1 bid $1.2577279999999997 at time 3.0 
+Player 1 bid $1.7105100799999993 at time 4.0 
+Player 1 bid $2.326293708799999 at time 5.0 
+Player 1 bid $3.163759443967998 at time 6.0 
+Player 1 bid $4.302712843796478 at time 7.0 
+Player 1 bid $5.851689467563209 at time 8.0 
+Player 1 bid $7.958297675885963 at time 9.0 
+Player 1 bid $10.82328483920491 at time 10.0 
+Player 1 bid $14.719667381318674 at time 11.0 
+
+The winner is player 1 with a profit of 15.280332618681326
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 12.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.69 at time 1.0 
+Player 1 bid $0.9521999999999998 at time 2.0 
+Player 1 bid $1.3140359999999998 at time 3.0 
+Player 1 bid $1.8133696799999994 at time 4.0 
+Player 1 bid $2.502450158399999 at time 5.0 
+Player 1 bid $3.4533812185919985 at time 6.0 
+Player 1 bid $4.765666081656957 at time 7.0 
+Player 1 bid $6.576619192686601 at time 8.0 
+Player 1 bid $9.075734485907509 at time 9.0 
+Player 1 bid $12.52451359055236 at time 10.0 
+Player 1 bid $17.283828754962258 at time 11.0 
+Player 1 bid $23.851683681847913 at time 12.0 
+
+The winner is player 1 with a profit of 6.148316318152087
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 15.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.7 at time 1.0 
+Player 1 bid $0.9799999999999999 at time 2.0 
+Player 1 bid $1.3719999999999997 at time 3.0 
+Player 1 bid $1.9207999999999996 at time 4.0 
+Player 1 bid $2.689119999999999 at time 5.0 
+Player 1 bid $3.764767999999999 at time 6.0 
+Player 1 bid $5.270675199999998 at time 7.0 
+Player 1 bid $7.378945279999996 at time 8.0 
+Player 1 bid $10.330523391999995 at time 9.0 
+Player 1 bid $14.462732748799992 at time 10.0 
+Player 1 bid $20.247825848319987 at time 11.0 
+Player 1 bid $28.34695618764798 at time 12.0 
+
+The winner is player 1 with a profit of 1.6530438123520206
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 16.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.71 at time 1.0 
+Player 1 bid $1.0082 at time 2.0 
+Player 1 bid $1.4316439999999997 at time 3.0 
+Player 1 bid $2.0329344799999998 at time 4.0 
+Player 1 bid $2.8867669615999993 at time 5.0 
+Player 1 bid $4.0992090854719985 at time 6.0 
+Player 1 bid $5.820876901370238 at time 7.0 
+Player 1 bid $8.265645199945737 at time 8.0 
+Player 1 bid $11.737216183922946 at time 9.0 
+Player 1 bid $16.666846981170583 at time 10.0 
+Player 1 bid $23.666922713262228 at time 11.0 
+
+The winner is player 1 with a profit of 6.3330772867377725
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 15.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.72 at time 1.0 
+Player 1 bid $1.0368 at time 2.0 
+Player 1 bid $1.4929919999999999 at time 3.0 
+Player 1 bid $2.1499084799999997 at time 4.0 
+Player 1 bid $3.0958682111999996 at time 5.0 
+Player 1 bid $4.458050224127999 at time 6.0 
+Player 1 bid $6.419592322744318 at time 7.0 
+Player 1 bid $9.244212944751817 at time 8.0 
+Player 1 bid $13.311666640442617 at time 9.0 
+Player 1 bid $19.16879996223737 at time 10.0 
+Player 1 bid $27.60307194562181 at time 11.0 
+
+The winner is player 1 with a profit of 2.39692805437819
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 13.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.73 at time 1.0 
+Player 1 bid $1.0657999999999999 at time 2.0 
+Player 1 bid $1.5560679999999998 at time 3.0 
+Player 1 bid $2.2718592799999997 at time 4.0 
+Player 1 bid $3.3169145488 at time 5.0 
+Player 1 bid $4.842695241247999 at time 6.0 
+Player 1 bid $7.070335052222079 at time 7.0 
+Player 1 bid $10.322689176244236 at time 8.0 
+Player 1 bid $15.071126197316582 at time 9.0 
+Player 1 bid $22.00384424808221 at time 10.0 
+Player 1 bid $32.12561260220003 at time 11.0 
+
+The winner is player 1 with a profit of -2.125612602200029
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 15.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.74 at time 1.0 
+Player 1 bid $1.0952 at time 2.0 
+Player 1 bid $1.620896 at time 3.0 
+Player 1 bid $2.39892608 at time 4.0 
+Player 1 bid $3.5504105983999996 at time 5.0 
+Player 1 bid $5.254607685631999 at time 6.0 
+Player 1 bid $7.77681937473536 at time 7.0 
+Player 1 bid $11.509692674608331 at time 8.0 
+Player 1 bid $17.03434515842033 at time 9.0 
+Player 1 bid $25.21083083446209 at time 10.0 
+
+The winner is player 1 with a profit of 4.78916916553791
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 15.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.75 at time 1.0 
+Player 1 bid $1.125 at time 2.0 
+Player 1 bid $1.6875 at time 3.0 
+Player 1 bid $2.53125 at time 4.0 
+Player 1 bid $3.796875 at time 5.0 
+Player 1 bid $5.6953125 at time 6.0 
+Player 1 bid $8.54296875 at time 7.0 
+Player 1 bid $12.814453125 at time 8.0 
+Player 1 bid $19.2216796875 at time 9.0 
+Player 1 bid $28.83251953125 at time 10.0 
+
+The winner is player 1 with a profit of 1.16748046875
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 18.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.76 at time 1.0 
+Player 1 bid $1.1552 at time 2.0 
+Player 1 bid $1.7559040000000001 at time 3.0 
+Player 1 bid $2.66897408 at time 4.0 
+Player 1 bid $4.0568406016 at time 5.0 
+Player 1 bid $6.166397714432001 at time 6.0 
+Player 1 bid $9.372924525936641 at time 7.0 
+Player 1 bid $14.246845279423693 at time 8.0 
+Player 1 bid $21.655204824724017 at time 9.0 
+
+The winner is player 1 with a profit of 8.344795175275983
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 17.0
+
+
+Player 0 bid $0.5 at time 0.0 
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.77 at time 1.0 
+Player 1 bid $1.1858 at time 2.0 
+Player 1 bid $1.826132 at time 3.0 
+Player 1 bid $2.81224328 at time 4.0 
+Player 1 bid $4.3308546512 at time 5.0 
+Player 1 bid $6.669516162848001 at time 6.0 
+Player 1 bid $10.271054890785921 at time 7.0 
+Player 1 bid $15.81742453181032 at time 8.0 
+Player 1 bid $24.358833778987893 at time 9.0 
+
+The winner is player 1 with a profit of 5.6411662210121065
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 13.0
+
+
+Player 1 bid $0.5 at time 0.0 
+Player 0 bid $0.5 at time 0.0 
+Player 0 bid $0.55 at time 1.0 
+Player 1 bid $0.78 at time 1.0 
+Player 1 bid $1.2168 at time 2.0 
+Player 1 bid $1.8982080000000001 at time 3.0 
+Player 1 bid $2.9612044800000006 at time 4.0 
+Player 1 bid $4.619478988800001 at time 5.0 
+Player 1 bid $7.206387222528002 at time 6.0 
+Player 1 bid $11.241964067143682 at time 7.0 
+Player 1 bid $17.537463944744147 at time 8.0 
+Player 1 bid $27.358443753800866 at time 9.0 
+
+The winner is player 1 with a profit of 2.6415562461991335
+The loser is player 0 with a loss of -0.05500000000000001
+Duration was 16.0
+
+

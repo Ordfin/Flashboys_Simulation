@@ -44,7 +44,7 @@ public class BlindRaising extends Strategy{
 	
 	public void enterValues(int n) throws Exception {
 		
-		Files f = new Files();
+		File f = new File();
 
 		ArrayList<Double> temp = f.read(n);
     	double fi = temp.get(1) * .01;
