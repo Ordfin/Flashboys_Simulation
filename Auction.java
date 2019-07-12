@@ -1,7 +1,14 @@
 //import java.awt.TextArea;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Arrays;
 //import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
+
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -22,7 +29,7 @@ public class Auction { //this is the right one
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
-	public void getInput() {
+	public void getInput(int n1, int n2) {
 		PoissonDistribution pd = new PoissonDistribution(15);
 		duration = pd.sample(); //Generate a random value sampled from this distribution.
 
@@ -38,35 +45,41 @@ public class Auction { //this is the right one
 			 * showInputDialog("Enter a loss function percent")) * .01; profit =
 			 * Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
 			 */
-			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
-	
-	
-	
-				
-			for (int i=0; i<amt_players; i++) {
-			
-				Object[] options1 = { "Reactive Counterbidding", "Blind Raising"};
-		
-		        JPanel panel = new JPanel();
-		        panel.add(new JLabel("Select Strategy for player " + i));
-		        
-		        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
-		                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
-		                null, options1, null);
-		        if (result == JOptionPane.YES_OPTION){
-		        	String s = "ReactiveCounterbidding";
-		        	Player p = new Player(i,s, 2);
-		    		players.add(p);
-	
-		        }
-		        if (result == JOptionPane.NO_OPTION){ 
-		        	String s = "BlindRaising";
-		        	Player p = new Player(i,s, 3);
-		    		players.add(p);
-	
-		        }
-	
-	        }
+			amt_players = 2;
+			String s = "BlindRaising";
+			Player p1 = new Player(0,s, n1);
+			Player p2 = new Player(1, s, n2);
+			players.add(p1);
+			players.add(p2);
+//			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
+//	
+//	
+//	
+//				
+//			for (int i=0; i<amt_players; i++) {
+//			
+//				Object[] options1 = { "Reactive Counterbidding", "Blind Raising"};
+//		
+//		        JPanel panel = new JPanel();
+//		        panel.add(new JLabel("Select Strategy for player " + i));
+//		        
+//		        int result = JOptionPane.showOptionDialog(null, panel, "Enter a Number",
+//		                JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE,
+//		                null, options1, null);
+//		        if (result == JOptionPane.YES_OPTION){
+//		        	String s = "ReactiveCounterbidding";
+//		        	Player p = new Player(i,s, n1);
+//		    		players.add(p);
+//	
+//		        }
+//		        if (result == JOptionPane.NO_OPTION){ 
+//		        	String s = "BlindRaising";
+//		        	Player p = new Player(i,s, n2);
+//		    		players.add(p);
+//	
+//		        }
+//	
+//	        }
 		}
 		catch(Exception e) {
 			System.exit(0);
@@ -78,7 +91,7 @@ public class Auction { //this is the right one
 	}
 	
 	
-	public void results() {
+	public String results() {
 		String output = ""; 
 		  for(int j = 0; j<BidList.size(); j++){ 
 			  String everything = BidList.get(j).toString(); 
@@ -97,15 +110,19 @@ public class Auction { //this is the right one
 				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*(-l); 
 				output += "The loser is player " + players.get(i).getId() + " with a loss of " + lost + "\n";
 		
-			  JOptionPane.showMessageDialog(null, output);
-			  System.out.println("Duration was " + duration);
+//			  JOptionPane.showMessageDialog(null, output);
+//			  System.out.println("Duration was " + duration);
+				output += "Duration was " + duration;
 			}
 		}
+//		BidList.clear();
+//		players.clear();
+		return output;
 
 	}
 	
-	
-	public void auction() {
+
+	public String auction() {
 		TreeMap<Double, ArrayList<Bid>> temp = new TreeMap<>();
 
 		double time = 0;
@@ -124,9 +141,7 @@ public class Auction { //this is the right one
 			temp.clear();
 			time+= .5;	
 		} 
-		
-		 
-		 
-			results(); 
+		String result = results();
+		return result;
 	}
 }	

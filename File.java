@@ -10,7 +10,7 @@ import java.util.Iterator;
 import org.json.simple.parser.*; 
 
 
-public class Files {
+public class File {
 	 
 
 	    public void write() throws FileNotFoundException  
