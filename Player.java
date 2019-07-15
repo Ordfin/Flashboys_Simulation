@@ -26,6 +26,7 @@ public class Player {
 		}
 		
 		this.bids = new ArrayList<Bid>();
+	}//end Player
 
 	
 
