@@ -23,7 +23,9 @@ public class Player {
         case "ReactiveCounterbidding": 
             this.strategy = new ReactiveCounterbidding(); 
             ((ReactiveCounterbidding) strategy).enterValues();
-
+            break; 
+        case "RandomStrategy":
+            this.strategy = new RandomStrategy();
             break; 
 		}
 		

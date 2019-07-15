@@ -53,10 +53,11 @@ public class Auction { //this is the right one
 			 * Integer.parseInt(JOptionPane.showInputDialog("Enter opportune profit"));
 			 */
 			amt_players = 2;
-			String s = "BlindRaising";
+			String s = "ReactiveCounterbidding";
+			String sn = "RandomStrategy";
 			auction_id = a;
 			Player p1 = new Player(0,s, n1);
-			Player p2 = new Player(1, s, n2);
+			Player p2 = new Player(1, sn, n2);
 			players.add(p1);
 			players.add(p2);
 //			amt_players = Integer.parseInt(JOptionPane.showInputDialog("Enter how many participants"));
