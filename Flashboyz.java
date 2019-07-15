@@ -27,9 +27,11 @@ public class Flashboyz {
 		
 		jo.put("Auction", j2);
  
+
 	    // writing JSON to file:"AuctionData2.0.json" in cwd 
 	    PrintWriter pw = new PrintWriter("Blind-Rand_AuctionData.json"); 
 	    System.out.println("gdfgsdfgsdfg");
+
 	    pw.write(jo.toJSONString()); 
 	        
 	    pw.flush(); 
