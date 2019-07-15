@@ -28,6 +28,7 @@ public class Flashboyz {
 		jo.put("Auction", j2);
  
 <<<<<<< HEAD
+<<<<<<< HEAD
 	    // writing JSON to file: in cwd 
 	    PrintWriter pw = new PrintWriter("AuctionResults.json"); 
 =======
@@ -35,6 +36,13 @@ public class Flashboyz {
 	    PrintWriter pw = new PrintWriter("Blind-Rand_AuctionData.json"); 
 	    System.out.println("gdfgsdfgsdfg");
 >>>>>>> c39a33753a0bfd4ec143c11bc701583fb77f7558
+=======
+
+	    // writing JSON to file:"AuctionData2.0.json" in cwd 
+	    PrintWriter pw = new PrintWriter("Blind-Rand_AuctionData.json"); 
+	    System.out.println("gdfgsdfgsdfg");
+
+>>>>>>> 72bb89ccff3f373e516ead8be74ca495c7491712
 	    pw.write(jo.toJSONString()); 
 	        
 	    pw.flush(); 
