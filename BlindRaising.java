@@ -37,13 +37,15 @@ public class BlindRaising extends Strategy{
 				Bid b = new Bid(t, amt , i);
 				super.addBid(temp, bidsPlayer, amt, b);
 				k++;
+
 			}
-		}
-		return;	
-	}
+		}//if
+	}//end run
+		
 	
 	public void enterValues(int n) throws Exception {
 		
+
 		File f = new File();
 
 		ArrayList<Double> temp = f.read(n);
