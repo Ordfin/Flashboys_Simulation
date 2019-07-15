@@ -1,4 +1,6 @@
 //import java.awt.TextArea;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,17 +9,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 //import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.util.TreeMap;
 import org.apache.commons.math3.distribution.PoissonDistribution;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 
 
 public class Auction { //this is the right one  
-
+	
+	private int auction_id;
 	private double duration; //auction duration
 	private double epsilon = .05; //minimum tick 
 	private double iota = .125; //minimum increase percent
@@ -29,7 +36,7 @@ public class Auction { //this is the right one
 	private ArrayList<Player> players = new ArrayList<Player>();
 
 	
-	public void getInput(int n1, int n2) {
+	public void getInput(int n1, int n2, int a) {
 		PoissonDistribution pd = new PoissonDistribution(15);
 		duration = pd.sample(); //Generate a random value sampled from this distribution.
 
@@ -47,6 +54,7 @@ public class Auction { //this is the right one
 			 */
 			amt_players = 2;
 			String s = "BlindRaising";
+			auction_id = a;
 			Player p1 = new Player(0,s, n1);
 			Player p2 = new Player(1, s, n2);
 			players.add(p1);
@@ -91,38 +99,66 @@ public class Auction { //this is the right one
 	}
 	
 	
-	public String results() {
-		String output = ""; 
-		  for(int j = 0; j<BidList.size(); j++){ 
-			  String everything = BidList.get(j).toString(); 
-			  output += everything +" "+ "\n"; 
+	public void results(JSONArray j2) throws FileNotFoundException {
+
+        
+		Map<String, Object> map = new LinkedHashMap<>();
+
+
+        // putting data to JSONObject 
+        map.put("auction_id", auction_id); 
+    
+ 		JSONArray ja = new JSONArray(); 
+	          
+ 		for(int j = 0; j<BidList.size(); j++){ 
+			// for address data, first create LinkedHashMap 
+ 			Map<String, Object> m = new LinkedHashMap(); 		        
+		    m.put("time", BidList.get(j).getTime()); 
+		    m.put("amount", BidList.get(j).getAmount()); 
+		    m.put("player", BidList.get(j).getPlayer());
+		          
+		    // adding map to list 
+		    ja.add(m); 
+
 		  } 
-		
-		output += "\n";
+ 		// putting address to JSONObject 
+ 		map.put("Bids", ja); 
+
 		int winner = BidList.get(BidList.size()-1).getPlayer(); 
-		
 		double win_amt = profit - (BidList.get(BidList.size()-1).getAmount());  
-		output += "The winner is player " + winner + " with a profit of " + win_amt + "\n";
+		
+        Map<String, Object> mp = new LinkedHashMap(); 		        
+        mp.put("winner_id", winner);
+        mp.put("profit", win_amt);
+        
+		map.put("winner", mp);
+		
+		
+		
 		
 		for (int i=0; i < players.size(); i++) {
 			if (players.get(i).getId() != winner){
 				
-				double lost = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*(-l); 
-				output += "The loser is player " + players.get(i).getId() + " with a loss of " + lost + "\n";
-		
+				double loss = (players.get(i).getBids().get(players.get(i).getBids().size()-1) .getAmount())*(-l); 
+				//output += "The loser is player " + players.get(i).getId() + " with a loss of " + lost + "\n";
+				mp = new LinkedHashMap<>();
+				mp.put("loser_id", players.get(i).getId());
+		        mp.put("loss", loss);
+		        map.put("loser", mp);
+		        
 //			  JOptionPane.showMessageDialog(null, output);
 //			  System.out.println("Duration was " + duration);
-				output += "Duration was " + duration;
-			}
+			}			
 		}
-//		BidList.clear();
-//		players.clear();
-		return output;
-
+		map.put("duration", duration);
+		j2.add(map);
 	}
 	
 
-	public String auction() {
+	
+	
+	
+	public void auction(JSONArray j2) throws FileNotFoundException {
 		TreeMap<Double, ArrayList<Bid>> temp = new TreeMap<>();
 
 		double time = 0;
@@ -141,7 +177,6 @@ public class Auction { //this is the right one
 			temp.clear();
 			time+= .5;	
 		} 
-		String result = results();
-		return result;
+		results(j2);
 	}
 }	
