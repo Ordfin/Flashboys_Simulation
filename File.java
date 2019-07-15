@@ -16,7 +16,7 @@ public class File {
 	    public void write() throws FileNotFoundException  
 	    { 
 	    	int counter = 0;
-	    	for (double i=10; i < 60; i+= 2) {
+	    	for (double i=1; i < 90; i+= 1) {
 	    		counter++;
 	    	
 		    	// creating JSONObject 

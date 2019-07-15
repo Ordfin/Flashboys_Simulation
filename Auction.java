@@ -108,21 +108,21 @@ public class Auction { //this is the right one
         // putting data to JSONObject 
         map.put("auction_id", auction_id); 
     
- 		JSONArray ja = new JSONArray(); 
-	          
- 		for(int j = 0; j<BidList.size(); j++){ 
-			// for address data, first create LinkedHashMap 
- 			Map<String, Object> m = new LinkedHashMap(); 		        
-		    m.put("time", BidList.get(j).getTime()); 
-		    m.put("amount", BidList.get(j).getAmount()); 
-		    m.put("player", BidList.get(j).getPlayer());
-		          
-		    // adding map to list 
-		    ja.add(m); 
-
-		  } 
- 		// putting address to JSONObject 
- 		map.put("Bids", ja); 
+// 		JSONArray ja = new JSONArray(); 
+//	          
+// 		for(int j = 0; j<BidList.size(); j++){ 
+//			// for address data, first create LinkedHashMap 
+// 			Map<String, Object> m = new LinkedHashMap(); 		        
+//		    m.put("time", BidList.get(j).getTime()); 
+//		    m.put("amount", BidList.get(j).getAmount()); 
+//		    m.put("player", BidList.get(j).getPlayer());
+//		          
+//		    // adding map to list 
+//		    ja.add(m); 
+//
+//		  } 
+// 		// putting address to JSONObject 
+// 		map.put("Bids", ja); 
 
 		int winner = BidList.get(BidList.size()-1).getPlayer(); 
 		double win_amt = profit - (BidList.get(BidList.size()-1).getAmount());  

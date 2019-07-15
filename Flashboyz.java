@@ -28,7 +28,7 @@ public class Flashboyz {
 		jo.put("Auction", j2);
  
 	    // writing JSON to file: in cwd 
-	    PrintWriter pw = new PrintWriter("AuctionData3.0.json"); 
+	    PrintWriter pw = new PrintWriter("AuctionResults.json"); 
 	    pw.write(jo.toJSONString()); 
 	        
 	    pw.flush(); 
