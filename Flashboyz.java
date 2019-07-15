@@ -11,6 +11,9 @@ public class Flashboyz {
 
 	public static void main(String[] args) throws Exception {
 		
+//		File f = new File();
+//		f.write();
+		
 		JSONObject jo = new JSONObject();
 		JSONArray j2 = new JSONArray();
         
@@ -24,8 +27,8 @@ public class Flashboyz {
 		
 		jo.put("Auction", j2);
  
-	    // writing JSON to file:"AuctionData2.0.json" in cwd 
-	    PrintWriter pw = new PrintWriter("AuctionData2.0.json"); 
+	    // writing JSON to file: in cwd 
+	    PrintWriter pw = new PrintWriter("AuctionData3.0.json"); 
 	    pw.write(jo.toJSONString()); 
 	        
 	    pw.flush(); 
