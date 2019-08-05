@@ -1,20 +1,13 @@
-Foobar
-Foobar is a Python library for dealing with word pluralization.
+# Flashboys 2.0
 
-Installation
-Use the package manager pip to install foobar.
+Flashboys 2.0[1] Auction Simulator 
 
-pip install foobar
-Usage
-import foobar
+## About
 
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+Flashboys 2.0 exposes bot strategies when competing to maximize arbitrage oppurtunities on Ethereum. This code simulates these continuous auctions by allowing user to select strategies of the bots to learn how reward is distributed. 
 
-Please make sure to update tests as appropriate.
+## Contributing
+Pull requests are welcome. To make a change, please first open an issue to discuss.
 
-License
-MIT
+## License
+[Flashboys2.0](https://pdaian.com/flashboys2.pdf)
