@@ -1,6 +1,6 @@
 # Flashboys 2.0
 
-Flashboys 2.0[1] Auction Simulator (Java)
+Continuous competitive auction simulator (Java)
 
 ## About
 
