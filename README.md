@@ -9,5 +9,5 @@ Flashboys 2.0 exposes bot strategies when competing to maximize arbitrage oppurt
 ## Contributing
 Pull requests are welcome. To make a change, please first open an issue to discuss.
 
-## License
+## Reference
 [Flashboys2.0](https://pdaian.com/flashboys2.pdf)
